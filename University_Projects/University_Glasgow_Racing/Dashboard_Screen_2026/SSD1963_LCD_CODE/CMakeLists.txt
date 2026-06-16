@@ -33,7 +33,7 @@ enable_language(C ASM)
 
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME}
-  Core/Inc/definables.h)
+  Core/Inc/CONFIG/display_config.h)
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
@@ -99,6 +99,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     Core/Inc/logos
     Core/Inc/fonts
     Core/Inc/dashboard
+    Core/Inc/important_settings
 
     #SD Card
     FATFS/APP

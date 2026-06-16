@@ -21,7 +21,7 @@ enum TouchMode;
 #define STARTING_SCREEN LOGO
 
 #define AUTOMATIC_TRANSITION_FROM_STARTING_SCREEN 1 //set to 1 to automatically transition from logo to endurance to pedal after startup after a short delay, 0 to stay on logo until touch
-#define AUTOMATIC_SECOND_SCREEN ENDURANCE //second screen (LOGO, ENDURANCE, PEDAL)
+#define AUTOMATIC_SECOND_SCREEN PEDAL //second screen (LOGO, ENDURANCE, PEDAL)
 
 //TouchMode
 #define TOUCH_MODE POLLING

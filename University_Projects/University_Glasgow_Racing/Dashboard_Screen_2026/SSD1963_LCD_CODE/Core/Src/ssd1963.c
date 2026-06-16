@@ -4,7 +4,7 @@
 #include "fmc.h"
 #include "tim.h"
 #include "stm32f7xx_hal.h"
-#include "definables.h"
+#include "CONFIG/display_config.h"
 
 // -----------------------------
 // FMC address mapping

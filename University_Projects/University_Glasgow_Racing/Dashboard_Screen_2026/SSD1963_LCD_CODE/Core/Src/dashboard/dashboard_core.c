@@ -1,7 +1,7 @@
 #include "dashboard_core.h"
 #include "dashboard_fonts.h"
 
-#include "definables.h"
+#include "CONFIG/display_config.h"
 #include "ssd1963.h"
 #include "gfx_text.h"
 #include "logos/ugr_logo.h"

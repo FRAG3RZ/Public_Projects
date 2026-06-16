@@ -35,7 +35,7 @@
   #include "ssd1963.h"
   #include "gt911.h" //touchscreen
 
-  #include "definables.h"
+  #include "CONFIG/display_config.h"
 
   #include "dashboard/endurance_dashboard.h"
   #include "dashboard/pedal_graph_dashboard.h"

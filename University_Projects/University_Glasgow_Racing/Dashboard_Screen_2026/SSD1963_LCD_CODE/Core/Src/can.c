@@ -21,7 +21,7 @@
 #include "can.h"
 
 /* USER CODE BEGIN 0 */
-#include "definables.h"
+#include "CONFIG/display_config.h"
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan2;
