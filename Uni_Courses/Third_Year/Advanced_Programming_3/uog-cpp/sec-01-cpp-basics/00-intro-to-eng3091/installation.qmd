@@ -1,0 +1,44 @@
+---
+title: "Installation of IDEs"
+subtitle: "**Visual Studio Code** | **Visual Studio** | **Code::Block**"
+author: 
+    Khiem Nguyen
+    <br> Lecturer in Multiscale Materials
+    <br> <khiem.nguyen@glasgow.ac.uk>
+author-meta: "Lecturer in Multiscale Materials"
+jupyter: false
+format: 
+    html:
+        page-layout: full
+        margin-left: 100px
+        margin-right: 100px
+---
+
+# Installing an Integrated Development Environment (IDE)
+
+An Integrated Development Environment (IDE) is a piece of software designed to make it easy to develop, build, and debug your programs.
+
+A typical modern IDE will include:
+
+- Some way to easily load and save your code files.
+- A code editor that has programming-friendly features, such as line numbering, syntax highlighting, integrated help, name completion, and automatic source code formatting.
+- A basic build system that will allow you to compile and link your program into an executable, and then run it.
+- An integrated debugger to make it easier to find and fix software defects. 
+- Some way to install plugins so you can modify the IDE or add capabilities such as version control.
+
+Some C++ IDEs will install and configure a C++ compiler and linker for you. Others will allow you to plug in a compiler and linker of your choice (installed separately). And while you could do all of these things separately, it's much easier to just install an IDE and be able to do all of these things from a single interface.
+
+
+**Rmark**
+
+To get the most value out of this site, we recommend installing an IDE that comes with a compiler that supports at least C++17.
+
+If you're restricted to using a compiler that only supports C++14 (due to educational or business constraints), many of the lessons and examples will still work. However, if you encounter a lesson that uses capabilities from C++17 (or newer) and you’re using an older language compiler, you'll have to skip it or translate it to your version, which may or may not be easy.
+
+You should not be using any compiler that does not support at least C++11 (which is typically considered the modern minimum spec for C++). I recommend installing the newest version of a compiler.
+
+If you are developing on a Windows 10 or 11 machine, then we strongly recommend downloading Visual Studio 2026.
+
+Once you run the installer, you’ll eventually come to a screen that asks you what workload you’d like to install. Choose Desktop development with C++. If you do not do this, then C++ capabilities will not be available. The default options selected on the right side of the screen should be fine, but please ensure that the Windows 11 SDK (or Windows 10 SDK if that is the only one available) is selected. Windows 11 SDK apps can run on Windows 10.
+
+**Note**&nbsp; Although I explained three different IDEs.

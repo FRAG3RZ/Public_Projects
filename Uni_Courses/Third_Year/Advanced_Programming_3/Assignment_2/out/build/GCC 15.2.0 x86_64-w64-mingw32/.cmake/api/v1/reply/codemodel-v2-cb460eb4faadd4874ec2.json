@@ -1,0 +1,247 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "external/matplotplusplus",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-external.matplotplusplus-Debug-12ad4540c89648c2e273.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "external/matplotplusplus"
+				},
+				{
+					"build" : "external/matplotplusplus/source",
+					"childIndexes" : 
+					[
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-external.matplotplusplus.source-Debug-5d1d2bc5c1b29cf4a368.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "external/matplotplusplus/source"
+				},
+				{
+					"build" : "external/matplotplusplus/source/3rd_party",
+					"jsonFile" : "directory-external.matplotplusplus.source.3rd_party-Debug-aaab1ec6efa36d05fe9b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "external/matplotplusplus/source/3rd_party",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "external/matplotplusplus/source/matplot",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-external.matplotplusplus.source.matplot-Debug-19beb2927491fa66c951.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "external/matplotplusplus/source/matplot",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "external/FTXUI",
+					"childIndexes" : 
+					[
+						6,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-external.FTXUI-Debug-acd06fd7afa5e63216e0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "external/FTXUI",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						5
+					]
+				},
+				{
+					"build" : "external/FTXUI/examples",
+					"jsonFile" : "directory-external.FTXUI.examples-Debug-685367e150ded191946f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 2,
+					"source" : "external/FTXUI/examples"
+				},
+				{
+					"build" : "external/FTXUI/doc",
+					"jsonFile" : "directory-external.FTXUI.doc-Debug-d8ee71752e959dfac369.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 2,
+					"source" : "external/FTXUI/doc"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Assignment2",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "Matplot++",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"name" : "ftxui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 5,
+					"id" : "component::@a03d29dfa361da1a3479",
+					"jsonFile" : "target-component-Debug-2201e588839fc3279711.json",
+					"name" : "component",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "demoplot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demoplot-Debug-0e0a8d8a99022a8b865d.json",
+					"name" : "demoplot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "dom::@a03d29dfa361da1a3479",
+					"jsonFile" : "target-dom-Debug-a00cb78a2701e9cd5a94.json",
+					"name" : "dom",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "matplot::@3dab5f96e0b953de5968",
+					"jsonFile" : "target-matplot-Debug-fdb5828382d6f8a21c19.json",
+					"name" : "matplot",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "nodesoup::@a4e76f96d33454c4ec7c",
+					"jsonFile" : "target-nodesoup-Debug-ae9c3a30b259fbcdb87f.json",
+					"name" : "nodesoup",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "screen::@a03d29dfa361da1a3479",
+					"jsonFile" : "target-screen-Debug-b600d5bffc105958e7a6.json",
+					"name" : "screen",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32",
+		"source" : "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,3 @@
+C:\ST\STM32CubeCLT_1.21.0\CMake\bin\cmake.exe -E rm -f CMakeFiles\demoplot.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\demoplot.dir/objects.a @CMakeFiles\demoplot.dir\objects1.rsp
+C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\demoplot.dir/objects.a -Wl,--no-whole-archive -o C:\Users\m4z3o\Desktop\University\Uni_Courses\Third_Year\Advanced_Programming_3\Assignment_2\All_Assignment_2_code\Project_Code\src\executables\demoplot_wsl.out.exe -Wl,--out-implib,libdemoplot_wsl.out.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\demoplot.dir\linkLibs.rsp

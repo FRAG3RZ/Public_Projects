@@ -1,0 +1,267 @@
+---
+title: "Chapter 00: Introduction to ENG3091"
+author: Khiem Nguyen -- <khiem.nguyen@glasgow.ac.uk>
+    # <br>Lecturer in Multiscale Materials
+    # <br><khiem.nguyen@glasgow.ac.uk>
+author-meta: "Lecturer in Multiscale Materials"
+
+format: 
+    # other themes: 
+    #   beige, blood, dark, dracula, league, moon, 
+    #   night, serif, simple, sky, solarized
+    # highlight-style: monokai      # good for dark images
+    html:
+        output-file: "chap_00.html"
+        grid:
+            body-width: 1600px
+            margin-width: 300px
+            sidebar-width: 350px
+        embed-resources: true
+        theme: simple
+        highlight-style: github
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true     # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    pdf:
+        output-file: "chap_00.pdf"
+        embed-resources: true
+        theme: simple
+        highlight-style: github      # good for dark images
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        geometry:
+            - top=24px
+            - bottom=24px
+            - left=36px
+            - right=36px
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    revealjs:
+        output-file: "chap_00_slide.html"
+        embed-resources: true
+        theme: simple
+        css: slide.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        highlight-style: github
+        slide-number: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true   # <-- remove white background in code blocks
+        code-block-border-left: false # optional: remove left border
+        toc: true
+        toc-depth: 1
+        toc-title: Contents
+
+---
+
+
+# Introduction to C/C++
+
+## A small history
+
+### Before C++, there was C:
+
+- The C language was developed in 1972 by Dennis Ritchie at Bell Telephone lab, primarily as a systems programming language (to write operating systems).
+- C was designed to give the programmer a lot of control, while allowing developers to write a program that could be run on different platforms.
+- C ended up being so efficient and flexible that in 1973, Ritchie and Ken Thompson rewrote most of the Unix operating system using C. 
+
+### Then C was born:
+- C++ (pronounced "see plus plus") was developed by Bjarne Stroustrup at Bell Labs as an extension to C, starting in 1979.
+- C++ adds many new features to the C language, and is perhaps best thought of as a superset of C.
+- C++'s most notable innovation over C is that it supports object-oriented programming.
+
+## Introduction to C and C++'s philosophy
+
+- The underlying design philosophy of C and C++ can be summed up as “trust the programmer” -- which is both wonderful and dangerous.
+
+- C++ is designed to allow the programmer a high degree of freedom to do what they want.
+
+- this also means the language often won't stop you from doing things that don’t make sense.
+
+- C++ is a compiled language.
+
+## Compiled vs Scripting Language (C++ vs Python)
+
+::: {.columns}
+
+::: {.column width="50%"}
+### [C++]{style="color: #00599C;"} (Compiled)
+* **Performance:** Native machine code (Fast).
+* **Errors:** Found at *Compile-time*.
+* **Deployment:** Ship the binary (`a.out`).
+* **Types:** Static (Strict).
+:::
+
+::: {.column .fragment width="50%"}
+### [Python]{style="color: #3776ab;"} (Scripting)
+* **Performance:** Interpreted (Slower).
+* **Errors:** Found at *Runtime*.
+* **Deployment:** Ship the source code (`.py`).
+* **Types:** Dynamic (Flexible).
+:::
+
+:::
+
+
+## What is C++ good at?
+- Video games
+- Real-time systems
+- High-performance financial applications (e.g. high frequency trading)
+- Graphical applications and simulations
+- Productivity / office applications
+- Embedded software
+- Audio and video processing
+- Artificial intelligence and neural networks
+
+C++ also has a large number of high-quality 3rd party libraries available, which can shorten development times significantly.
+
+## Hello world in C++
+```{.cpp #lst-hello lst-cap="Hello ENG3091"}
+{{< include ./cpp/hello.cpp >}}
+```
+
+- We need to compile this program to see the output. Watch me!
+
+## Another program example
+```{.cpp #lst-math lst-cap="Do some maths"}
+{{< include ./cpp/addition.cpp >}}
+```
+- We need to compile this program to see the output. Watch me!
+
+# Curriculum & Assessment
+
+## Curriculum
+
+1. [**Basic C++**]{style="color:red"}
+   
+    Variables, Functions, Control Flow  
+2. [**Intermediate C++**]{style="color:red"}
+
+    References, Pointers, Template, Function Overriding, Dynamic Array
+3. [**Object-oriented Programming** (OOP)]{style="color:red"}
+
+    $4$ pillars of OOP: $(1)$ Encapsulation, $(2)$ Abstraction, $(3)$ Inheritance, $(4)$ Polymorphism
+4. [**Standard Template Library (STL)**]{style="color:red"}
+    - Some commonly used STL containers: Vector, List, Array, $\ldots$
+    - Some commonly used STL algorithms: Sort, Find, Count, Unique, $\ldots$
+5. [**Unified Modelling Language**]{style="color:red"}:
+
+    In this course, we learn how to organize a large project by using class diagrams
+
+## Curriculum: Extra when we have enough time
+
+6. [**make**]{style="color:red"} and [**cmake**]{style="color:red"} -- Extra materials: Coverred if we have enough time.
+
+    How to automate build process, how to install open-source libraries and how to build our own libraries
+
+## What is **software engineering**?
+
+{{< video ./figures/software_engineering_video.mp4 >}}
+
+## What is **software engineering**?
+
+{{< video https://www.youtube.com/watch?v=4qSk8_AZwIg width="100%" height="85%" >}}
+
+## The word **software engineering** is overstated in this course!!!
+
+My opinions:
+
+::: {.incremental}
+- You must be kidding me. 
+
+    - A software engineer's average salary varies greatly by location, experience, and company, but in the UK, it generally ranges from entry-level around $£25k-£35k$ up to $£70k+$ for senior roles, with London often paying more, while in the US, median total compensation can exceed $$180k$, especially at top tech firms.
+
+    - [The School of Engineering asks me to teach Software Engineering in 10 weeks?]{style="color:red"}&nbsp; [Mission impossible!]{style="color:blue"}
+
+- Can you become a software engineer after $10$ weeks of learning C++ and class diagrams? 
+
+    - [HELL NO]{style="color:red"}
+- Then, why do we even need to learn? 
+
+    - [Whoever we want to become, we need to build the first brick.]{style="color:red"}
+:::
+
+
+## Will learning Programming & Software Engineering be still relevant in AI era?
+
+
+> _I am teaching C++ at School of Engineering, Uni of Glasgow. Many students believe that AI Chatbot like ChatGPT, Gemini and CoPilot will soon replace software engineering. What is your opinion about this?_
+
+
+Let us ask Gemini, CoPilot and ChatGPT what they think.
+
+
+## Answer from Gemini
+![](./figures/gemini_will_ai_replace_software_engineer.png)
+
+## Answer from CoPilot
+![](./figures/copilot_will_ai_replace_software_engineer.png)
+
+## Answer from ChatGPT
+![](./figures/chatgpt_will_ai_replace_software_engineer.png)
+
+
+## Assessment
+- $2$ Continuous Assessments: $25\%$ + $25\%$
+    - For each assessment: A group of $2$ or $3$ students will work on the same assignment and get the same grade (peer review grade is under consideration). 
+    - Please talk to each other and team up on your willing.
+    - From my own experience, you tend to get better grades working in pair/group than working individually.
+- $1$ Paper Exam: $50\%$
+
+## Performce of the students in the last few years
+Performance on the last three years
+
+- Year 2022/2023 -- Nick Bailey: 36   $\rightarrow$ On average, E2
+- Year 2023/2024 -- Nick Bailey: 35   $\rightarrow$ On average, E2
+- Year 2024/2025 -- Khiem Nguyen: 45   $\rightarrow$ On average, D2
+- Mid-term assignment grades from me are also significantly higher than from Nick Bailey -- **On average**: A3 (or probably A2) from me and A5 from Nick Bailey.
+
+[**Question**]{style="color:blue"}&nbsp; *Huge difference between mid-term assignments and final paper exam???*
+
+::: {.fragment}
+[**Answer**]{style="color:blue"}&nbsp; *Yes, ChatGPT can help in mid-term*, but [not in the paper exam]{style="color:red"}.
+:::
+
+::: {.fragment}
+> On average, I am confident to say I am generally more lenient than many other lecturers.
+>
+> But, I cannot give points to a completely wrong answer.
+:::
+
+## How to learn this course
+
+::: {.incremental}
+
+- As with any programming language, you need to:
+    1. **practice**
+    2. **practice**
+    3. **practice**
+- Can you use **AI Chatbot** to **learn** this course? 
+    - Hell, yes!
+    - But you really need to "**learn**". There is a _hudge_ difference between **"you understand"** and **"you think you understand"**.
+- It is **foolish** to think that 
+    1. "I only need to worry about the big picture, AI Chatbot will do programming in the future."
+    2. "AI Chatbot will replace software developers."
+    3. "Why do we need to study programming in the era of AI Boom!"
+:::

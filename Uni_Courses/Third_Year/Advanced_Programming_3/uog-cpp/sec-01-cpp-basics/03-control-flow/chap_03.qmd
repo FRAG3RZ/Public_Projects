@@ -1,0 +1,827 @@
+---
+title: "Chapter 03: Control Flow"
+author: Khiem Nguyen -- <khiem.nguyen@glasgow.ac.uk>
+    # <br>Lecturer in Multiscale Materials
+    # <br><khiem.nguyen@glasgow.ac.uk>
+author-meta: "Lecturer in Multiscale Materials"
+
+format: 
+    # other themes: 
+    #   beige, blood, dark, dracula, league, moon, 
+    #   night, serif, simple, sky, solarized
+    # highlight-style: monokai      # good for dark images
+    html:
+        output-file: "chap_03.html"
+        grid:
+            body-width: 1600px
+            margin-width: 300px
+            sidebar-width: 350px
+        embed-resources: true
+        theme: simple
+        highlight-style: github
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true     # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    pdf:
+        output-file: "chap_03.pdf"
+        embed-resources: true
+        theme: simple
+        highlight-style: github      # good for dark images
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        geometry:
+            - top=24px
+            - bottom=24px
+            - left=36px
+            - right=36px
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    revealjs:
+        output-file: "chap_03_slide.html"
+        embed-resources: true
+        theme: simple
+        css: slide.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        highlight-style: github
+        slide-number: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true   # <-- remove white background in code blocks
+        code-block-border-left: false # optional: remove left border
+        toc: true
+        toc-depth: 1
+        toc-title: Contents
+
+---
+
+# Control flow introduction
+
+## Categories of flow control statements
+
+::: { .fragment}
+
+- We have already learned "control flow" in Python Programming. 
+- So, we do not need to explain what they are and what they are for. 
+
+::: 
+
+::: { .fragment}
+
+However, we recall:
+
+| Categories | Implemented by |
+|------------|----------------|
+| Conditional statements | `if`, `else`, `switch` |
+| Jumps | `goto`, `break`, `continue` |
+| Function calls | function calls `function()`, `return`
+| Loops | `while`, `do-while`, `for`, `ranged-for` |
+| Halts | `std::exit()`, `std::abort()` |
+| Exceptions | `try`, `throw`, `catch` |
+
+:::
+
+::: { .fragment}
+
+**Our goal**: 
+
+- We learn some commonly used control flow statements, redirect you to extra materials.
+- In the end, we can learn all the things in $10$ weeks. 😌
+- We do not need all to get $A1$ grade 😁.
+
+::: 
+
+# `if` statements and blocks
+
+C++ supports two basic kinds of conditionals
+- `if` statements 
+- `switch` statements
+
+## `if` statement syntax
+
+- An `if` statement takes the form
+
+    ```{ .cpp #lst-if-syntax lst-cap='\`if-else\` statement syntax'}
+    if (condition)
+        true_statement;
+    ```
+
+- An `if-else` statement takes the form
+
+    ```{ .cpp #lst-if-else-syntax lst-cap='\`if-else\` statement syntax'}
+    if (condition)
+        true_statement;
+    else
+        false_statement;
+    ```
+
+- If the `condition` evaluates to `true`, the `true_statement` execuates.
+- If the `condition` evaluates to `false`, and the optional `else` statement exists, the `false_statement` execuates.
+
+## `if` statement: Example
+
+```{ .cpp #lst-if-else-example lst-cap="An example of \`if-else\` statement"}
+{{< include ./cpp/example_if_else.cpp >}}
+```
+
+
+## `if-else` with multiple conditional statements
+
+- New programmers or Python guys may often try something like this
+```{.cpp #lst-if-else-without-braces lst-cap="\`if-else\` statement that produces unexpected result"}
+- See the runtime process in next slide!
+
+{{< include ./cpp/example_if_else_without_braces.cpp >}}
+```
+
+## `if-else` with multiple conditional statements
+- Running the above program and making input, the output may look like this
+  
+    ```{.cpp}
+    Enter your height (in cm): 180
+    You are tall enough to ride.
+    Too bad!
+    ``` 
+- The indentation is deceiving us here -- the above program executes as if it had been written as follows:
+  
+    ```{.cpp}
+    if (x >= constants::minRideHeightCM)
+        std::cout << "You are tall enough to ride.\n";
+    else
+        std::cout << "You are not tall enough to ride.\n";
+
+    std::cout << "Too bad!\n"; // focus on this line
+    ```
+- This program do not work as expected because the `true_statement` and `false_statement` can only be a single statement. The statement to print `Too bad!` will always execute.
+
+> **Remark** 
+> 
+> Indetation in C++ is just space and has no effect as in Python.
+
+## if-else with multiple condition statements
+
+- We need a compound statement (block) to fix the above issue. 
+- We put curly braces `{...}` around the code block as a compound statement.
+  
+```{.cpp #lst-if-else-with-braces}
+{{< include ./cpp/example_if_else_with_braces.cpp >}}
+```
+
+## Implicit blocks
+
+- If the programmer does not declare a block in the statement portion of an `if` statement or `else` statement, the compiler will implicitly declare one.
+  
+    ```{.cpp}
+    if (condition)
+        true_statement;
+    else
+        false_statement;
+    ```
+    is equivalent to
+
+    ```{.cpp}
+    if (condition)
+    {
+        true_statement;
+    }
+    else
+    {
+        false_statement;
+    }
+    ```
+- Most of the time, this do not matter. However, new programmers sometimes try to define variables in implicit block (see next slide).
+
+## Implicit blocks
+Let us look at this program
+
+```{.cpp #lst-define-var-in-implicit lst-cap="Example: Define a variable in an implicit block and see its effect"}
+{{< include ./cpp/define_variable_in_implicit_block_01.cpp >}}
+```
+
+::: { .fragment}
+**Question**&nbsp; If I compile and run this code, what would you expect to see?
+:::
+
+::: {.fragment}
+**Answer**&nbsp; This code will not compile because `x` is defined in implicit blocks created by the `if` and `else` statements, making `x` out of scope after those blocks. In fact, `x` is destroyed immediately after its definition since there are no braces to create a scope that extends beyond the definition.
+:::
+
+## Implicit blocks
+The above code listing is actually equivalent to this
+
+```{.cpp #lst-defin-var-in-implicit-02 lst-cap="Example: Define a variable in an implicit block and see its effect. Full blocks are shown."}
+{{< include ./cpp/define_variable_in_implicit_block_02.cpp >}}
+```
+
+## To block or not block single statements
+
+### Argument for not to use block
+- The best argument for not using blocks around single statements is that adding blocks makes you able to see less of your code at one time by spacing it out vertically, which makes your code less readable and can lead to other, more serious mistakes.  
+
+- My opinion: This argument is becoming obsolete as the monitor size and monitor resolution are becoming bigger. Therefore, we can see more chunks of code in one screen.
+
+### Argument for "to use block"
+There are many reasons given as rationale for using blocks. We shall consider some example
+
+> **Best practice**
+>
+> Consider putting single statements associated with an if or else in blocks (particularly while you are learning).
+
+## Example for why using block is good
+
+### Example 1
+- Look at this code snippet:
+  
+    ```{.cpp}
+    if (age >= min_drinking_age)
+        purchase_beer();
+    ```
+
+- Now that we are in hurry and modify the program to add another ability:
+
+    ```{.cpp}
+    if (age >= min_drinking_age)
+        purchase_beer();
+        gamble();       // will always execute as indentation has no effect here
+    ```
+
+- This code snippet is essentially equivalent to
+ 
+    ```{.cpp}
+    if (age >= min_drinking_age) {
+        purchase_beer();
+    }
+    gamble();       // will always execute as indentation has no effect here
+    ```
+
+## Example for why using block is good
+### Example 2
+
+- Not using blocks can make programs more difficult to debug. Let’s say we have the following snippet:
+
+    ```{.cpp}
+    if (age >= min_drinking_age)
+        add_beer_to_cart(); // conditionally executes
+
+    check_out();            // always executes
+    ```
+
+- Assume that we suspect something is wrong with `add_beer_to_cart()` function, and we comment it out:
+
+    ```{.cpp}
+    if (age >= min_drinking_age)
+        // add_beer_to_cart(); // conditionally executes
+
+    check_out();            // conditionally executes now
+    ```
+    We've accidentally made `check_out()` conditional, which is not our intention.
+
+
+## Example for why using block is good
+
+### Example 3
+    
+`if constexpr` (a variant of the `if`-statement added in C++23) **requires the use of blocks**. Thus using blocks ensures consistency between `if` and `if constexpr`.
+
+Again:
+
+> **Best practice**
+> 
+> Consider putting single statements associated with an if or else in blocks (particularly while you are learning). 
+> 
+> More experienced C++ developers sometimes disregard this practice in favor of tighter vertical spacing. 
+> 
+> **My opinion**: _This reason become obsolete with massive monitors these days._
+
+## `if-else` versus `if-if`
+
+- New programmers sometimes wonder when they should use `if-else` or `if-if`.
+- You may see advices from others/online tutorials about when to use `if-else` and `if-if`.
+  
+**My opinion**:
+
+- _All the advices are redundant. It depends on your own logics of writing the code that behaves the way you expect._
+- _Practice and you will see_
+- _Why do we even need to remember when!!!_ 
+
+# `switch` statement basics
+
+## `switch` statement: Introduction
+Let us look at the program: 
+```{.cpp #lst-print-digit-with-if-else-if lst-cap="Print digit name with \`if-else-if\` statement"}
+{{< include ./cpp/print_digit_name_ifelse.cpp >}}
+```
+
+- Note that C++ does not have `elif` as in Python. We have to write explicitly `else if`.
+
+## `switch` statement: Introduction
+
+- Because testing a variable or expression for equality against a set of different values is common, C++ provides the `switch`-statement that is specialized for this purpose.
+```{.cpp #lst-print-digit-with-switch lst-cap="Print digit name with `switch` statement"}
+{{< include ./cpp/print_digit_name_switch.cpp >}}
+```
+
+## `switch` statement: Syntax
+
+```{.cpp}
+switch(expression) {
+case x:
+    // code block
+    break;
+case y:
+    // code block
+    break;
+default:
+    // code block
+}
+// After the switch block, things continue going on.
+```
+
+- An expression (sometimes called the condition) is evaluated to produce a value.
+- If the expression’s value is equal to the value after any of the `case`-labels, the statements after the matching `case`-label are executed.
+- If no matching value can be found and a `default` label exists, the statements after the `default` label are executed.
+- If no matching value can be found and there is no default label, the `switch` is skipped.
+
+## `switch` statement: Further info
+
+- A `switch`-statement is started by using the `switch` keyword, [_followed by parentheses with the conditional expression_]{style="color: red"}.
+- The condition in a switch must evaluate to an integral type (e.g. `1`, `2`, `3`, $\ldots$) or an enumerated type (_we will learn later_).
+- Expressions that evaluate to floating point types, strings, and most other non-integral types cannot be used here.
+- Following the conditional expression, we declare a block. Inside the block, we use labels to define all of the values we want to test for equality.
+- There are two kinds of labels used with switch statements: `case` label and `default` label.
+
+## `switch` statement: Further regarding using `break`
+
+- In the example about using `switch`, we used `return`-satements to stop execution of the statements after our lable.s But this also exits the entire function. 
+
+- In general, we use a `break` statement to tell the compiler we are done executing statements within the `switch`, and that execution should continue after the `switch` block
+
+```{.cpp}
+switch(expression) {
+case x:
+    // code block
+    break;
+case y:
+    // code block
+    break;
+default:
+    // code block
+}
+// After the switch blocks, things continue going on.
+```
+
+## `switch` statement: Further regarding `case` labels
+- The `case` label is declared using the `case` keyword and [_followed by a constant expression_]{style="color: red"}.
+- The constant expression must either match the type of the condition or must be convertible to that type.
+
+::: {#lst-case-label-expression lst-cap="The expression in `switch` statement can be a math expression evaluating to an integral constant. It does not need to be a just literal constant."}
+```{.cpp }
+{{< include ./cpp/case_label_expression.cpp >}}
+```
+:::
+
+# `switch` fallthrough and scoping
+
+# `goto` statements
+
+> [It is avisable to avoid this unless you have a very compelling reason to use `goto` statements.]{style="color: red"}
+
+Read further from -- Click on the texts; they contain links:
+
+- [`goto` statement from learncpp.com](https://www.learncpp.com/cpp-tutorial/goto-statements/)
+- [`goto` statement from geeksforgeeks.org](https://www.geeksforgeeks.org/cpp/goto-statement-in-cpp/)
+
+# Introduction to loops and `while` statements
+
+## Loops
+
+- We all know what loops are and why we need loops. No point to explain them further.
+- We shall study:
+    - `while` loop 
+    - `do-while` loop
+    - `for` loop
+
+
+## `while` statements, or `while` loop: Syntax
+
+::: {#lst-cpp-example lst-cap="Syntax: `while` loop"}
+```{.cpp}
+while (condition)
+    statement;
+```
+:::
+
+- When a while-statement is executed, the expression condition is evaluated.
+- If the condition evaluates to true, the _associated statement_ executes.
+- Once the statement has finished executing, control returns to the top of the while-statement and the process is repeated.
+
+::: {#lst-while-loop-ex lst-cap="Example: `while` loop"}
+```{.cpp}
+{{< include ./cpp/while_loop_ex.cpp >}}
+```
+:::
+
+## `while` statements that evaluate to `false` initially
+
+- Needless to say, if the condition initially evaluates to false, the associated statement will not execute at all.
+- In programming, a `while` loop that evaluates to `false` immediately is often intentional (of course sometimes our stupid logical mistakes). 
+- It acts as a safety gate, ensuring that the code inside only runs when specific conditions are met, preventing errors or unnecessary processing.
+
+Let at the following code in Python:
+```python
+# A list of pending system updates
+updates = [] 
+
+# len(updates) > 0 evaluates to False immediately
+while len(updates) > 0:
+    current = updates.pop(0)
+    print(f"Installing: {current}")
+
+print("System is already up to date.")
+```
+
+## `while` statements that evaluate to `false` initially
+
+- In C++, a `while` loop that evaluates to `false` initially is frequently used for Resource Acquisition and Validation. 
+- For example, if the resource (like a file or a network socket) fails to open, the loop condition is `false` from the start, and the program safely skips the processing logic.
+
+::: {#lst-read-file lst-cap="Read a file"}
+```{.cpp}
+{{< include ./cpp/read_a_file.cpp >}}
+```
+:::
+
+## Infinite loops
+
+- On the other hand, if the expression always evaluates to true, the while loop will execute forever.
+- This is called an [_infinite loop_]{style="color: blue"}
+- Again, we want to write _infinite loop_ **intentionally** rather than **stupid mistake**.
+
+::: {#lst-infinite-loop lst-cap="An example of infinite loop"}
+```{.cpp}
+{{< include ./cpp/infinite_loop.cpp >}}
+```
+:::
+
+## Doing something every $N$ iterations
+
+Let us combine `if` and `while` statements to write something interesting.
+
+::: {#lst-while-combine-if lst-cap="A program using both `if` and `while` statements"}
+```{.cpp}
+{{< include ./cpp/program_using_if_and_while.cpp >}}
+```
+:::
+
+## Nested loops
+
+- It is not a surprise that we can write [**nested loops**]{style="color : red"}
+  
+::: {#lst-nested-loop-example lst-cap="A nested loop example"}
+```{.cpp}
+{{< include ./cpp/nested_loop_example.cpp >}}
+```
+:::
+
+## Two small challenges
+
+- Go home, don't sleep. 
+- Try to write C++ programs to output the following results before going to party.
+- Note that the first column represents the code line numbers, not the intended output.
+
+```{.cpp #lst-homework-1 lst-cap="Homework 1"}
+6 5 4 3 2 1
+5 4 3 2 1
+4 3 2 1
+3 2 1
+2 1
+1
+```
+
+```{.cpp #lst-homework-1 lst-cap="Homework 2"}
+          1
+        2 1
+      3 2 1
+    4 3 2 1
+  5 4 3 2 1
+6 5 4 3 2 1
+```
+
+# `do-while` statements
+
+## `do-while` statements
+
+- A `do-while` statement is a looping construct that works just like a `while` loop, [except the statement always executes at least once]{style="color:purple"}.
+
+::: {#lst-do-while-loop-example lst-cap="A `do-while` loop example" filename="do_while_loop_example.cpp"}
+```{.cpp}
+{{< include ./cpp/do_while_loop_example.cpp >}}
+```
+:::
+
+# `for` statements
+
+## `for` loop: Syntax
+
+- The `for` statement looks pretty simple in abstract:
+```{.cpp}
+for (init-statement; condition; end-expression)
+   statement;
+```
+
+- The easiest way to initially understand a how `for` statement works is to convert it into an equivalent `while` statement
+```{.cpp}
+{ // note the block here
+    init-statement; // used to define variables used in the loop
+    while (condition)
+    {
+        statement; 
+        end-expression; // used to modify the loop variable
+                        // prior to reassessment of the condition
+    }
+} // variables defined inside the loop go out of scope here
+```
+
+## Evaluation of `for` statements
+
+- First, the init-statement is executed. This only happens once when the loop is initiated.
+- Second, with each loop iteration, the condition is evaluated. If this evaluates to true, the statement is executed. If this evaluates to false, the loop terminates and execution continues with the next statement beyond the loop.
+- Finally, after the statement is executed, the end-expression is evaluated.
+
+**Key insight**
+
+The order of execution for the different parts of a `for`-statement is as follows:
+
+1. Init-statement
+2. Condition (if this is false, the loop terminates here).
+3. Loop body
+4. End-expression (then jumps back to condition)
+
+## `for` loop: Example
+- Let us look at a simple example
+
+    ```{.cpp}
+    int main()
+    {
+        for (int i{ 1 }; i <= 10; ++i)
+            std::cout << i << ' ';
+        std::cout << '\n';
+    }
+    ```
+
+- Let us convert it to the `while` loop
+  
+    ```{.cpp}
+    int main()
+    {
+        { // the block here ensures block scope for i
+            int i{ 1 }; // our init-statement
+            while (i <= 10) // our condition
+            {
+                std::cout << i << ' '; // our statement
+                ++i; // our end-expression
+            }
+        }
+        std::cout << '\n';
+    }
+    ```
+
+## Omitted expressions
+
+- It is possible to write `for` loops that omit any or all of the statements or expressions.
+
+    ```{.cpp}
+    #include <iostream>
+    int main()
+    {
+        int i{ 0 };
+        for ( ; i < 10; ) // no init-statement or end-expression
+        {
+            std::cout << i << ' ';
+            ++i;
+        }
+        std::cout << '\n';
+        return 0;
+    }
+    ```
+
+- It is worth noting that the following example produces an infinite loop: 
+  
+    ```{.cpp}
+    for (;;)
+        statement;
+    ```
+
+    This is equivalent to
+
+    ```{.cpp}
+    while (true)
+        statement;
+    ```
+
+## `for` loops with multiple counters
+
+::: {#lst-for-loop-multi-counters lst-cap="A `for` loop with multiple counters"}
+```{.cpp}
+{{< include ./cpp/for_loop_multi_counters.cpp >}}
+```
+:::
+
+This program will output:
+```{.cpp}
+0 9
+1 8
+2 7
+3 6
+4 5
+5 4
+6 3
+7 2
+8 1
+9 0
+```
+
+## Nested `for` loops
+::: {#lst-nested-for-loops lst-cap="A example of nested `for` loops"}
+```{.cpp}
+{{< include ./cpp/nested_for_loops.cpp >}}
+```
+:::
+
+# `break` and `continue`
+
+## `break` and `continue`: Quick recap
+
+> - The `break` statement causes a `while` loop, `do-while` loop, `for` loop, or `switch` statement to end, with execution continuing with the next statement after the loop or `switch` being broken out of.
+>
+> - The `continue` statement provides a convenient way to end the current iteration of a loop without terminating the entire loop.
+
+- In general, you want to use `break` and `continue` statements within conditional statements.
+  - What's the point to define a loop and `break` out of the loop after one first iteration.
+  - What's the point to define a loop and use `continue` to make the iterations run as normal.
+- We have learned `break` and `continue` from programming in Python. The functionalities of `break` and `continue` in C++ are essentially the same.
+
+
+
+## `break` and `continue`: Flowchart
+
+::: {.columns}
+::: {.column width="50%"}
+![`break` statement](./figures/break-statement-flowchart.png)
+:::
+::: {.column width="50%"}
+![`continue` statement](./figures/continue-statement-flowchart.png)
+:::
+:::
+
+## Breaking in `switch`
+
+- One of the difference as compared to Python is that we need `break` to avoid fall-through in `switch` statement.
+- A `break` is typically used at the end of each case to signify the case is finished.
+
+## Breaking in `switch`: Demonstration
+::: {#lst-break-a-switch lst-cap="Use `break` to avoid fall-through in `switch` statement" filename="break_a_switch.cpp"}
+```{.cpp}
+{{< include ./cpp/break_a_switch.cpp >}}
+```
+:::
+
+## Breaking a loop: Demonstration
+
+::: {#lst-break-a-loop lst-cap="Use `break` to break out of a loop" filename="break_a_loop.cpp"}
+```{.cpp}
+{{< include ./cpp/break_a_switch.cpp >}}
+```
+:::
+
+## Breakin an infinite loop: Demonstration
+A `break` is also a common way to get out of an *intentional infinite* loop.
+
+::: {#lst-break-infinite-loop lst-cap="Use `break` to break out of an infinite loop" filename="break_infinite_loop.cpp"}
+```{.cpp}
+{{< include ./cpp/break_infinite_loop.cpp >}}
+```
+:::
+
+## `break` versus `return`
+
+I believe it is easy to distinguish `break` from `return` in terms of functionalities. But just in case $\ldots$
+
+- A `break` statement terminates the switch or loop, and execution continues at the first statement beyond the switch or loop.
+- A `return` statement terminates the entire function that the loop is within, and execution continues at point where the function was called.
+
+I believe that the difference between `break` and `return` is an easy concept for Year-3 students, but let me give a demonstration just in case $\ldots$
+
+## `break` versus `return`: Demonstration
+
+::: {#lst-break-infinite-loop lst-cap="Use `break` to break out of an infinite loop" filename="break_vs_return.cpp"}
+```{.cpp}
+{{< include ./cpp/break_vs_return.cpp >}}
+```
+:::
+
+## `continue`: Demonstration
+
+# Further notes about `break`, `continue` and `return`
+
+## Debate about about `break` and `continue`
+- In the past, **Structured Programming** purists argued that `break` and `continue` were just hidden verions of the `goto` statement and should be avoided.
+- However, in monder C++ development, the concensus has shifted: **use them when they make your code more readable and interpretable**.
+
+## Debate about about `break` and `continue`: Example
+
+- Without `continue`, the following code is rather difficult to read
+```{.cpp}
+for (const auto& item : inventory) {
+    if (item.isValid()) {
+        if (item.isAvailable()) {
+            if (item.price < budget) {
+                // Core logic is buried 3 levels deep
+                process(item);
+            }
+        }
+    }
+}
+```
+
+- With `continue`, the code is easier to read
+```{.cpp}
+for (const auto& item : inventory) {
+    if (!item.isValid()) continue;
+    if (!item.isAvailable()) continue;
+    if (item.price >= budget) continue;
+
+    // Core logic is easy to see at the top level
+    process(item);
+}
+```
+
+
+# Question & Answer
+
+## Q&A for Chocolate: Question 01
+
+**Question**:&nbsp; How will this programe **behave**?
+
+::: {#lst-Q-and-A lst-cap="How will this program behave?" filename="Q_and_A_01.cpp"}
+```{.cpp}
+{{< include ./cpp/Q_and_A_01.cpp >}}
+```
+:::
+
+## Q&A for Chocolate: Question 02
+
+What is your opinion about it? $\Rightarrow$ Just say something, say whatever you think
+
+```{.cpp}
+{{< include ./cpp/Q_and_A_02.cpp >}}
+```
+
+## Q&A for Chocolate: Question 02
+
+Nothing is shown here just in case I made a mistake, double clicking $\ldots$
+
+## Q&A for Chocolate: Question 02
+
+It is better to write as follows:
+
+```{.cpp hide="true"}
+{{< include ./cpp/Q_and_A_02_rewrite.cpp >}}
+```
+
+# Homework
+
+## Self-taught materials
+
+Use Gemini - Guided Learning Mode to learn the following two topics:
+
+1. Basic data types in C++. At least you should learn the most (if not all) of the following basic data types
+
+   - Integers: `int` `unsigned int`, `long int`, $\ldots$ 
+   - Real numbers: `float`, `double`
+   - Boolean: `bool`
+   - `void` data type
+   - Character and String: `char`, `std::string` 
+2. `namespace` in C++
+
+    - You will see that `std` is a namespace.

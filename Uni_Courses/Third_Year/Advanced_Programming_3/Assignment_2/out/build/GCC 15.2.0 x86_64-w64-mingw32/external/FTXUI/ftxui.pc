@@ -1,0 +1,9 @@
+prefix="C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/install/GCC 15.2.0 x86_64-w64-mingw32"
+libdir="C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/install/GCC 15.2.0 x86_64-w64-mingw32/lib"
+includedir="C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/install/GCC 15.2.0 x86_64-w64-mingw32/include"
+
+Name: ftxui
+Description: 
+Version: 6.1.9
+Cflags: -I${includedir}
+Libs: -L${libdir} -lftxui-component -lftxui-dom -lftxui-screen

@@ -1,0 +1,305 @@
+---
+title: "Chapter 01: Structure of program & Variables in C++"
+author: Khiem Nguyen -- <khiem.nguyen@glasgow.ac.uk>
+    # <br>Lecturer in Multiscale Materials
+    # <br><khiem.nguyen@glasgow.ac.uk>
+author-meta: "Lecturer in Multiscale Materials"
+
+format: 
+    # other themes: 
+    #   beige, blood, dark, dracula, league, moon, 
+    #   night, serif, simple, sky, solarized
+    # highlight-style: monokai      # good for dark images
+    html:
+        output-file: "chap_01.html"
+        grid:
+            body-width: 1600px
+            margin-width: 300px
+            sidebar-width: 350px
+        embed-resources: true
+        theme: simple
+        highlight-style: github
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true     # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    pdf:
+        output-file: "chap_01.pdf"
+        embed-resources: true
+        theme: simple
+        highlight-style: github      # good for dark images
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        geometry:
+            - top=24px
+            - bottom=24px
+            - left=36px
+            - right=36px
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    revealjs:
+        output-file: "chap_01_slide.html"
+        embed-resources: true
+        theme: simple
+        css: slide.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        highlight-style: github
+        slide-number: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true   # <-- remove white background in code blocks
+        code-block-border-left: false # optional: remove left border
+        toc: true
+        toc-depth: 1
+        toc-title: Contents
+
+---
+
+# Statements and the `main` function
+
+## Statements
+
+- When we convey an idea to another person, we communicate in sentences. 
+- In C++, when we want to have our program do something, we write statements.
+- Statements are by far the most common type of instruction in a C++ program.
+- Most (but not all) statements in C++ end in a semicolon.
+
+### Different kinds of statements
+- Declaration statements
+- Jump statements
+- Expression statements
+- Compound statements
+- Selection statements (conditionals)
+- Iteration statements (loops)
+- Try blocks
+
+## Function and the `main` function
+
+- A **function** is a collection of statements that get executed sequentially (in order, from top to bottom).
+
+**Rule**  
+Every C++ program must have a special function named `main` (all lower case letters).
+
+```{.cpp #lst-hello lst-cap="Hello world"}
+{{< include ./cpp/hello.cpp >}}
+```
+
+## Syntax and syntax errors
+- In the English language, sentences are constructed according to specific grammatical rules that you probably learned in English class in school.
+- The C++ programming language also has a syntax, which describes how the elements of your program must be written and arranged in order for the program to be considered valid.
+- When you compile your program, the compiler is responsible for making sure your program follows these syntactical rules.
+
+```{.cpp #lst-hello lst-cap="Hello world with syntax error!"}
+{{< include ./cpp/hello_error.cpp >}}
+```
+**Note**&nbsp; See the compilation process in live lecture.
+
+# Comments
+
+## Comments
+We all know what comments in programming language are and do.
+
+In C++ there are two different styles of comments.
+
+- Single-line comments
+- Multi-line comments
+
+## Single-line comments
+The `//` symbol begins a C++ single-line comment, which tells the compiler to ignore everything from the `//` symbol to the end of the line.
+
+```{.cpp #lst-comment-short lst-cap="Comment at the end of the code"}
+std::cout << "Hello world!"; // Everything from here is ignored.
+```
+
+```{.cpp #lst-comment-long lst-cap="Break the comments to prevent long line of code"}
+// std::cout lives in the iostream library
+std::cout << "Hello world!\n";
+// this is much easier to read
+std::cout << "It is very nice to meet you!\n";
+// don't you think so?
+std::cout << "Yeah!\n";
+```
+
+## Multi-line comments
+The `/*` and `*/` pair of symbols denotes a C-style multi-line comment. Everything in between the symbols is ignored.
+
+```{.cpp #lst-multiline-comment lst-cap="Multi-line comment"}
+/* This is a multi-line comment.
+   This line will be ignored.
+   So will this one. */
+```
+
+Since everything between the symbols is ignored, you will sometimes see programmers “beautify” their multi-line comments:
+```{.cpp #lst-multiline-comment lst-cap="Beautify multi-line comment"}
+/* This is a multi-line comment.
+ * the matching asterisks to the left
+ * can make this easier to read
+ */
+```
+
+# Objects and variables
+
+## Objects and variables
+
+- In C++, direct memory access is discouraged. Instead, we access memory indirectly through an **object**.
+- An **object** represents a region of storage (typically RAM or a CPU register) that can hold a value.
+- Although objects in C++ can be unnamed (anonymous), more often we name our objects using an **identifier**. 
+- An object with a name is called a **variable**.
+
+We shall learn more about **object** in **Object-Oriented Programming**.
+
+## Variable definition
+- In order to use a variable in our C++ program, we need to tell the compiler that we want one.
+- The most common way to do this is by use of a special kind of declaration statement called a **definition**.
+
+```{.cpp #lst-define-variable lst-cap="Define variables"}
+int x; // define a variable named x (of type int)
+```
+
+```{.cpp #lst-define-variable-program lst-cap="Full program: define a variable named x"}
+{{< include ./cpp/define_variable.cpp >}}
+```
+
+## Variable definition
+- Study the following example -- Watch my compilation process!
+```{.cpp #lst-define-variable-program lst-cap="Full program: define multiple variables"}
+{{< include ./cpp/define_variables.cpp >}}
+```
+
+# Variable assignment and initialization
+
+## Variable assignment
+- After a variable has been defined, we can give it a value (in a separate statement) using the `=` operator. 
+- This process is called **assignment**, and the `=` operator is called the assignment operator.
+```{.cpp #lst-variable-assignment lst-cap="Variable assignment"}
+{{< include ./cpp/variable_assignment.cpp >}}
+```
+
+## Variable initialization
+- One downside of assignment is that assigning a value to a just-defined object requires two statements: one to define the variable, and another to assign the value.
+- These two steps can be combined. When an object is defined, we can optionally provide an initial value for the object.
+- The process of specifying an initial value for an object is called **initialization**, and the syntax used to initialize an object is called an **initializer**.
+```{.cpp #lst-variable-initialization lst-cap="Variable initialization"}
+{{< include ./cpp/variable_initialization.cpp >}}
+```
+
+## Different forms of initialization
+- There are $5$ common forms of initialization in C++
+```{.cpp #lst-different-forms lst-cap="Different forms of initialization in C++"}
+int a;         // default-initialization (no initializer)
+
+// Traditional initialization forms:
+int b = 5;     // copy-initialization (initial value after equals sign)
+int c ( 6 );   // direct-initialization (initial value in parenthesis)
+
+// Modern initialization forms (preferred):
+int d { 7 };   // direct-list-initialization (initial value in braces)
+int e {};      // value-initialization (empty braces)
+```
+- As of C++17, **copy-initialization**, **direct-initialization**, and **direct-list-initialization** behave identically in most cases.
+- _The modern way to initialize objects in C++ is to use a form of initialization that makes use of curly braces_. This is called **list-initialization** (or **uniform initialization** or **brace initialization**).
+
+<u>**Best practice**</u>&nbsp; Prefer **direct-list-initialization** or **value-initialization** to initialize your variables.
+
+## Unused initialized variables warnings
+```{.cpp #lst-unused-variable lst-cap="Unused variable"}
+{{< include ./cpp/unused_variable.cpp >}}
+```
+
+# Introduction to iostream: `cout`, `cin`, and `endl`
+## The input/output library
+
+- The input/output library (io library) is part of the C++ standard library that deals with basic input and output.
+- The _io_ part of _iostream_ stands for input/output.
+- To use the functionality defined within the iostream library, we need to include the iostream header at the top of any code file.
+
+## Using `std::cout` to output to console
+- The `iostream` library contains a few predefined variables for us to use. 
+- `std::cout` allows us to send data to the console to be printed as text. 
+- `cout` stands for “character output”.
+
+```{.cpp #lst-use-stdcout lst-cap="Use of `std::cout`"}
+{{< include ./cpp/use_stdcout.cpp >}}
+```
+
+## Using `std::endl` to output a newline
+- One way to output a newline is to output `std::endl` (which stands for “end line”)
+```{.cpp #lst-newline lst-cap="Use `std::newline` to enter a new line"}
+{{< include ./cpp/use_stdnewline.cpp >}}
+```
+
+## Using `std::cin` to input from console
+- `std::cin` is another predefined variable in the iostream library.
+- `std::cin` (which stands for “character input”) reads input from keyboard.
+
+```{.cpp #lst-use-stdcin lst-cap="Use `std::cin` to input from keyboard"}
+{{< include ./cpp/use_stdcin.cpp >}}
+```
+
+
+## `std::cin` is buffered
+We'll demonstrate this using the following program and run it two times -- See compilation process.
+
+```{.cpp #lst-stdin-buffered lst-cap="`std::cin` is buffered"}
+{{< include ./cpp/stdcin_buffered.cpp >}}
+```
+
+## Operator `<<` and Operator `>>`
+
+New programmers often mix up `std::cin`, `std::cout`, the insertion operator `<<` and the extraction operator `>>`. Here's an easy way to remember:
+
+- `std::cout` is used to output a value (`cout` = character output).
+- `std::cin` is used to get an input value (`cin` = character input).
+
+- `<<` is used with `std::cout`, and *shows the direction that data is moving*.  
+`std::cout << 4` moves the value `4` to the `std::cout` and thus to the console.
+- `>>` is used with std::cin, and *shows the direction that data is moving*.  
+`std::cin >> x` moves the value the user entered from the keyboard into variable x.
+
+## Uninitialized variables
+- C/C++ does not automatically initialize most variables to a given value (such as zero).
+- When a variable that is not initialized is given a memory address to use to store data, the default value of that variable is whatever (garbage) value happens to already be in that memory address!
+- A variable that has not been given a known value (through initialization or assignment) is called an uninitialized variable.
+
+The terms "_initialized_" and "_uninitialized_" are not strict opposites: 
+
+- "_initialized_" means the object was provided with an initial value at the point of definition. 
+- "_unitialized_" means the object has not been given a known value yet (through any means, including assignment)
+
+To Recap:
+
+- Initialized = The object is given a known value at the point of definition.
+- Assignement = The object is given a known value beyond the point of definition.
+- Uninitialized = The object has not been given a known value yet.
+
+## Unitialized variables
+
+```{.cpp #lst-uninitialized-variable lst-cap="Uninitialized variables"}
+{{< include ./cpp/uninitialized_variable_01.cpp >}}
+```
+
+## Unitialized variables
+
+```{.cpp #lst-uninitialized-variable lst-cap="Uninitialized variables"}
+{{< include ./cpp/uninitialized_variable_02.cpp >}}
+```

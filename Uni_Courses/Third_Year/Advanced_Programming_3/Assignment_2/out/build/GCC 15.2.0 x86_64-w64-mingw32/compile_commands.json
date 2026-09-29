@@ -1,0 +1,710 @@
+[
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX @CMakeFiles/demoplot.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\demoplot.dir\\All_Assignment_2_code\\Project_Code\\src\\demo_with_graphs.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\All_Assignment_2_code\\Project_Code\\src\\demo_with_graphs.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/All_Assignment_2_code/Project_Code/src/demo_with_graphs.cpp",
+  "output": "CMakeFiles/demoplot.dir/All_Assignment_2_code/Project_Code/src/demo_with_graphs.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/3rd_party",
+  "command": "C:\\mingw64\\bin\\g++.exe -D_USE_MATH_DEFINES @CMakeFiles/nodesoup.dir/includes_CXX.rsp -g -std=c++17 -fvisibility=hidden -o CMakeFiles\\nodesoup.dir\\nodesoup\\src\\algebra.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\3rd_party\\nodesoup\\src\\algebra.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/3rd_party/nodesoup/src/algebra.cpp",
+  "output": "external/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/nodesoup/src/algebra.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/3rd_party",
+  "command": "C:\\mingw64\\bin\\g++.exe -D_USE_MATH_DEFINES @CMakeFiles/nodesoup.dir/includes_CXX.rsp -g -std=c++17 -fvisibility=hidden -o CMakeFiles\\nodesoup.dir\\nodesoup\\src\\fruchterman_reingold.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\3rd_party\\nodesoup\\src\\fruchterman_reingold.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/3rd_party/nodesoup/src/fruchterman_reingold.cpp",
+  "output": "external/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/nodesoup/src/fruchterman_reingold.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/3rd_party",
+  "command": "C:\\mingw64\\bin\\g++.exe -D_USE_MATH_DEFINES @CMakeFiles/nodesoup.dir/includes_CXX.rsp -g -std=c++17 -fvisibility=hidden -o CMakeFiles\\nodesoup.dir\\nodesoup\\src\\kamada_kawai.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\3rd_party\\nodesoup\\src\\kamada_kawai.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/3rd_party/nodesoup/src/kamada_kawai.cpp",
+  "output": "external/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/nodesoup/src/kamada_kawai.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/3rd_party",
+  "command": "C:\\mingw64\\bin\\g++.exe -D_USE_MATH_DEFINES @CMakeFiles/nodesoup.dir/includes_CXX.rsp -g -std=c++17 -fvisibility=hidden -o CMakeFiles\\nodesoup.dir\\nodesoup\\src\\layout.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\3rd_party\\nodesoup\\src\\layout.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/3rd_party/nodesoup/src/layout.cpp",
+  "output": "external/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/nodesoup/src/layout.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/3rd_party",
+  "command": "C:\\mingw64\\bin\\g++.exe -D_USE_MATH_DEFINES @CMakeFiles/nodesoup.dir/includes_CXX.rsp -g -std=c++17 -fvisibility=hidden -o CMakeFiles\\nodesoup.dir\\nodesoup\\src\\nodesoup.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\3rd_party\\nodesoup\\src\\nodesoup.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/3rd_party/nodesoup/src/nodesoup.cpp",
+  "output": "external/matplotplusplus/source/3rd_party/CMakeFiles/nodesoup.dir/nodesoup/src/nodesoup.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\backend\\backend_interface.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\backend\\backend_interface.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/backend/backend_interface.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/backend/backend_interface.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\backend\\gnuplot.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\backend\\gnuplot.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/backend/gnuplot.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/backend/gnuplot.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\backend\\backend_registry.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\backend\\backend_registry.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/backend/backend_registry.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/backend/backend_registry.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\core\\axes_type.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\core\\axes_type.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/core/axes_type.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/axes_type.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\core\\axes_object.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\core\\axes_object.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/core/axes_object.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/axes_object.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\core\\axis_type.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\core\\axis_type.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/core/axis_type.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/axis_type.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\core\\figure_type.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\core\\figure_type.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/core/figure_type.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/figure_type.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\core\\figure_registry.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\core\\figure_registry.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/core/figure_registry.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/figure_registry.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\core\\legend.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\core\\legend.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/core/legend.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/legend.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\core\\line_spec.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\core\\line_spec.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/core/line_spec.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/core/line_spec.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\colors.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\colors.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/colors.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/colors.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\common.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\common.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/common.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/common.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\contourc.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\contourc.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/contourc.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/contourc.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\popen.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\popen.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/popen.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/popen.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\world_cities.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\world_cities.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/world_cities.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/world_cities.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\world_map_10m.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\world_map_10m.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/world_map_10m.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/world_map_10m.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\world_map_50m.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\world_map_50m.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/world_map_50m.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/world_map_50m.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\util\\world_map_110m.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\util\\world_map_110m.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/util/world_map_110m.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/util/world_map_110m.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\bars.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\bars.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/bars.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/bars.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\box_chart.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\box_chart.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/box_chart.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/box_chart.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\circles.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\circles.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/circles.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/circles.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\contours.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\contours.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/contours.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/contours.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\error_bar.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\error_bar.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/error_bar.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/error_bar.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\filled_area.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\filled_area.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/filled_area.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/filled_area.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\function_line.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\function_line.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/function_line.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/function_line.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\histogram.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\histogram.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/histogram.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/histogram.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\labels.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\labels.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/labels.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/labels.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\line.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\line.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/line.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/line.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\matrix.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\matrix.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/matrix.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/matrix.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\network.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\network.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/network.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/network.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\parallel_lines.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\parallel_lines.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/parallel_lines.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/parallel_lines.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\stair.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\stair.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/stair.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/stair.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\string_function.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\string_function.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/string_function.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/string_function.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\surface.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\surface.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/surface.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/surface.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\axes_objects\\vectors.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\axes_objects\\vectors.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/axes_objects/vectors.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/axes_objects/vectors.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\freestanding\\axes_functions.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\freestanding\\axes_functions.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/freestanding/axes_functions.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/freestanding/axes_functions.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot",
+  "command": "C:\\mingw64\\bin\\g++.exe -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Dcimg_display=2 @CMakeFiles/matplot.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\matplot.dir\\freestanding\\histcounts.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\matplotplusplus\\source\\matplot\\freestanding\\histcounts.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/matplotplusplus/source/matplot/freestanding/histcounts.cpp",
+  "output": "external/matplotplusplus/source/matplot/CMakeFiles/matplot.dir/freestanding/histcounts.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_SCREEN_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/screen.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\screen.dir\\src\\ftxui\\screen\\box.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\screen\\box.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/screen/box.cpp",
+  "output": "external/FTXUI/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_SCREEN_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/screen.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\screen.dir\\src\\ftxui\\screen\\color.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\screen\\color.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/screen/color.cpp",
+  "output": "external/FTXUI/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_SCREEN_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/screen.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\screen.dir\\src\\ftxui\\screen\\color_info.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\screen\\color_info.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/screen/color_info.cpp",
+  "output": "external/FTXUI/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_SCREEN_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/screen.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\screen.dir\\src\\ftxui\\screen\\surface.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\screen\\surface.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/screen/surface.cpp",
+  "output": "external/FTXUI/CMakeFiles/screen.dir/src/ftxui/screen/surface.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_SCREEN_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/screen.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\screen.dir\\src\\ftxui\\screen\\screen.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\screen\\screen.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/screen/screen.cpp",
+  "output": "external/FTXUI/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_SCREEN_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/screen.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\screen.dir\\src\\ftxui\\screen\\string.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\screen\\string.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/screen/string.cpp",
+  "output": "external/FTXUI/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_SCREEN_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/screen.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\screen.dir\\src\\ftxui\\screen\\terminal.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\screen\\terminal.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/screen/terminal.cpp",
+  "output": "external/FTXUI/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\automerge.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\automerge.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/automerge.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/automerge.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\selection_style.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\selection_style.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/selection_style.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/selection_style.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\blink.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\blink.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/blink.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/blink.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\bold.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\bold.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/bold.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/bold.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\border.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\border.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/border.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\box_helper.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\box_helper.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/box_helper.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/box_helper.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\canvas.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\canvas.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/canvas.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/canvas.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\clear_under.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\clear_under.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/clear_under.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/clear_under.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\color.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\color.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/color.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/color.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\composite_decorator.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\composite_decorator.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/composite_decorator.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/composite_decorator.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\dbox.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\dbox.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/dbox.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/dbox.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\dim.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\dim.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/dim.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/dim.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\flex.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\flex.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/flex.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/flex.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\flexbox.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\flexbox.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/flexbox.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/flexbox.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\flexbox_config.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\flexbox_config.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/flexbox_config.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_config.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\flexbox_helper.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\flexbox_helper.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/flexbox_helper.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_helper.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\focus.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\focus.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/focus.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/focus.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\frame.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\frame.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/frame.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/frame.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\gauge.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\gauge.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/gauge.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/gauge.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\graph.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\graph.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/graph.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/graph.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\gridbox.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\gridbox.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/gridbox.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/gridbox.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\hbox.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\hbox.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/hbox.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/hbox.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\hyperlink.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\hyperlink.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/hyperlink.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/hyperlink.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\inverted.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\inverted.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/inverted.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/inverted.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\italic.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\italic.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/italic.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/italic.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\linear_gradient.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\linear_gradient.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/linear_gradient.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/linear_gradient.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\node.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\node.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/node.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\node_decorator.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\node_decorator.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/node_decorator.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/node_decorator.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\paragraph.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\paragraph.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/paragraph.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/paragraph.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\reflect.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\reflect.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/reflect.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/reflect.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\scroll_indicator.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\scroll_indicator.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/scroll_indicator.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/scroll_indicator.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\selection.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\selection.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/selection.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/selection.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\separator.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\separator.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/separator.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/separator.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\size.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\size.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/size.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/size.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\spinner.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\spinner.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/spinner.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/spinner.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\strikethrough.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\strikethrough.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/strikethrough.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/strikethrough.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\table.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\table.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/table.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/table.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\text.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\text.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/text.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/text.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\underlined.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\underlined.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/underlined.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/underlined.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\underlined_double.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\underlined_double.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/underlined_double.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/underlined_double.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\util.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\util.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/util.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/util.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_DOM_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/dom.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\dom.dir\\src\\ftxui\\dom\\vbox.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\dom\\vbox.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/dom/vbox.cpp",
+  "output": "external/FTXUI/CMakeFiles/dom.dir/src/ftxui/dom/vbox.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\animation.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\animation.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/animation.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/animation.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\button.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\button.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/button.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/button.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\catch_event.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\catch_event.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/catch_event.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/catch_event.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\checkbox.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\checkbox.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/checkbox.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/checkbox.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\collapsible.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\collapsible.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/collapsible.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/collapsible.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\component.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\component.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/component.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/component.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\component_options.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\component_options.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/component_options.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/component_options.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\container.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\container.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/container.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/container.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\dropdown.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\dropdown.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/dropdown.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/dropdown.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\event.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\event.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/event.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/event.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\hoverable.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\hoverable.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/hoverable.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/hoverable.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\input.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\input.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/input.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/input.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\maybe.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\maybe.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/maybe.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/maybe.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\menu.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\menu.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/menu.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/menu.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\modal.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\modal.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/modal.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/modal.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\radiobox.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\radiobox.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/radiobox.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/radiobox.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\renderer.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\renderer.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/renderer.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/renderer.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\resizable_split.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\resizable_split.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/resizable_split.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/resizable_split.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\app.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\app.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/app.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/app.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\slider.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\slider.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/slider.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/slider.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\task.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\task.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/task.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/task.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\task_queue.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\task_queue.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/task_queue.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/task_queue.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\task_runner.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\task_runner.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/task_runner.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/task_runner.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\terminal_input_parser.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\terminal_input_parser.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/terminal_input_parser.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/terminal_input_parser.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\util.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\util.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/util.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/util.cpp.obj"
+},
+{
+  "directory": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/out/build/GCC 15.2.0 x86_64-w64-mingw32/external/FTXUI",
+  "command": "C:\\mingw64\\bin\\g++.exe -DIS_FTXUI_COMPONENT_IMPL=1 -DUNICODE -D_UNICODE @CMakeFiles/component.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\component.dir\\src\\ftxui\\component\\window.cpp.obj -c C:\\Users\\m4z3o\\Desktop\\University\\Uni_Courses\\Third_Year\\Advanced_Programming_3\\Assignment_2\\external\\FTXUI\\src\\ftxui\\component\\window.cpp",
+  "file": "C:/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/FTXUI/src/ftxui/component/window.cpp",
+  "output": "external/FTXUI/CMakeFiles/component.dir/src/ftxui/component/window.cpp.obj"
+}
+]

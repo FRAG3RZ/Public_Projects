@@ -1,0 +1,452 @@
+[
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_SCREEN_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/box.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/box.cpp",
+  "output": "external/ftxui/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_SCREEN_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/color.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/color.cpp",
+  "output": "external/ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_SCREEN_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/color_info.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/color_info.cpp",
+  "output": "external/ftxui/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_SCREEN_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/surface.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/surface.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/surface.cpp",
+  "output": "external/ftxui/CMakeFiles/screen.dir/src/ftxui/screen/surface.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_SCREEN_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/screen.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/screen.cpp",
+  "output": "external/ftxui/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_SCREEN_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/string.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/string.cpp",
+  "output": "external/ftxui/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_SCREEN_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/terminal.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/screen/terminal.cpp",
+  "output": "external/ftxui/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/automerge.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/automerge.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/automerge.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/automerge.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/selection_style.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/selection_style.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/selection_style.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/selection_style.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/blink.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/blink.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/blink.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/blink.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/bold.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/bold.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/bold.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/bold.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/border.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/border.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/box_helper.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/box_helper.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/box_helper.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/box_helper.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/canvas.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/canvas.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/canvas.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/canvas.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/clear_under.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/clear_under.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/clear_under.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/clear_under.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/color.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/color.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/color.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/color.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/composite_decorator.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/composite_decorator.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/composite_decorator.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/composite_decorator.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/dbox.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/dbox.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/dbox.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/dbox.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/dim.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/dim.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/dim.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/dim.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flex.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flex.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flex.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flex.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flexbox.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flexbox.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flexbox.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox_config.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flexbox_config.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flexbox_config.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_config.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox_helper.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flexbox_helper.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/flexbox_helper.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_helper.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/focus.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/focus.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/focus.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/focus.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/frame.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/frame.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/frame.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/frame.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/gauge.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/gauge.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/gauge.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/gauge.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/graph.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/graph.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/graph.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/graph.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/gridbox.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/gridbox.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/gridbox.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/gridbox.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/hbox.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/hbox.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/hbox.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/hbox.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/hyperlink.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/hyperlink.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/hyperlink.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/hyperlink.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/inverted.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/inverted.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/inverted.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/inverted.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/italic.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/italic.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/italic.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/italic.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/linear_gradient.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/linear_gradient.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/linear_gradient.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/linear_gradient.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/node.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/node.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/node_decorator.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/node_decorator.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/node_decorator.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/node_decorator.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/paragraph.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/paragraph.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/paragraph.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/paragraph.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/reflect.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/reflect.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/reflect.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/reflect.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/scroll_indicator.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/scroll_indicator.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/scroll_indicator.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/scroll_indicator.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/selection.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/selection.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/selection.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/selection.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/separator.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/separator.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/separator.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/separator.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/size.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/size.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/size.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/size.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/spinner.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/spinner.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/spinner.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/spinner.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/strikethrough.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/strikethrough.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/strikethrough.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/strikethrough.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/table.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/table.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/table.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/table.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/text.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/text.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/text.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/text.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/underlined.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/underlined.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/underlined.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/underlined.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/underlined_double.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/underlined_double.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/underlined_double.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/underlined_double.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/util.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/util.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/util.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/util.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_DOM_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/dom.dir/src/ftxui/dom/vbox.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/vbox.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/dom/vbox.cpp",
+  "output": "external/ftxui/CMakeFiles/dom.dir/src/ftxui/dom/vbox.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/animation.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/animation.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/button.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/button.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/button.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/button.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/catch_event.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/catch_event.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/catch_event.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/catch_event.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/checkbox.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/checkbox.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/checkbox.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/checkbox.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/collapsible.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/collapsible.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/collapsible.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/collapsible.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/component.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/component.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/component.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/component.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/component_options.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/component_options.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/component_options.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/component_options.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/container.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/container.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/container.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/container.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/dropdown.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/dropdown.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/dropdown.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/dropdown.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/event.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/event.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/event.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/event.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/hoverable.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/hoverable.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/hoverable.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/hoverable.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/input.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/input.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/input.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/input.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/maybe.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/maybe.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/maybe.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/maybe.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/menu.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/menu.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/menu.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/menu.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/modal.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/modal.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/modal.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/modal.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/radiobox.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/radiobox.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/radiobox.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/radiobox.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/renderer.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/renderer.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/renderer.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/renderer.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/resizable_split.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/resizable_split.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/resizable_split.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/resizable_split.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/app.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/app.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/app.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/app.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/slider.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/slider.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/slider.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/slider.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/task.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/task.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/task.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/task.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/task_queue.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/task_queue.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/task_queue.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/task_queue.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/task_runner.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/task_runner.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/task_runner.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/task_runner.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/terminal_input_parser.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/terminal_input_parser.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/terminal_input_parser.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/terminal_input_parser.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/util.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/util.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/util.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/util.cpp.o"
+},
+{
+  "directory": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui",
+  "command": "/usr/bin/c++ -DIS_FTXUI_COMPONENT_IMPL=1 -I/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src -isystem /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/include -std=c++17 -fPIC -o CMakeFiles/component.dir/src/ftxui/component/window.cpp.o -c /mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/window.cpp",
+  "file": "/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/external/ftxui/src/ftxui/component/window.cpp",
+  "output": "external/ftxui/CMakeFiles/component.dir/src/ftxui/component/window.cpp.o"
+}
+]

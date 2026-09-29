@@ -1,0 +1,43 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"external/matplotplusplus/source/matplot/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/matplot/detail",
+			"paths" : 
+			[
+				"out/build/GCC 15.2.0 x86_64-w64-mingw32/external/matplotplusplus/source/matplot/matplot/detail/exports.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/matplotplusplus/source/matplot",
+		"source" : "external/matplotplusplus/source/matplot"
+	}
+}

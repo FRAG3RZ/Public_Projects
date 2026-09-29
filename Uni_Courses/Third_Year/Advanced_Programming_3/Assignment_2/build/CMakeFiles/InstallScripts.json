@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/cmake_install.cmake",
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/matplotplusplus/cmake_install.cmake",
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/matplotplusplus/source/cmake_install.cmake",
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/matplotplusplus/source/3rd_party/cmake_install.cmake",
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/matplotplusplus/source/matplot/cmake_install.cmake",
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui/cmake_install.cmake",
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui/examples/cmake_install.cmake",
+		"/mnt/c/Users/m4z3o/Desktop/University/Uni_Courses/Third_Year/Advanced_Programming_3/Assignment_2/build/external/ftxui/doc/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

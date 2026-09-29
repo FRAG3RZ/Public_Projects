@@ -1,0 +1,36 @@
+
+====DAC CONNECTOR (2-pin) ===
+DAC - PTE30;
+GND
+
+====LINE CONNECTOR (8-pin) ===
+GND
+left_sensor_2(A4);
+left_sensor_1(A3);
+middle_sensor(A2);
+right_sensor_2(A1);
+right_sensor_1(A0);
+sensor_transistor(PTC11);(or any other gpio too)
+GND
+
+====COLOR SENSOR CONNECTOR (4-pin) ===
+GND
+5V
+PTE0 - SDA
+PTE1 - SCL
+
+====ULTRASONIC BREAKOUT BOARD CONNECTOR (4-pin) === 
+(5V WILL BE SUPPLIED TO THE BREAKBOUT BOARD DIRECTLY)
+(BOTH ECHOS NEEDS TO BE SHIFED DOWN TO 3.3V USING POTENTIAL DIVIDER)
+D8 - FRONT_TRIG (can change)
+D9 - FRONT-ECHO (can change)
+D10 - RIGHT_TRIG (can change)
+D11 - RIGHT_ECHO (can change)
+
+====HC-05 BLUETOOTH CONNECTOR=== (6-pin) (SOCKET, NOT MOLEX!)
+PTE21 - STATE (can change)
+PTE22 - BT_RX (MCU TX)
+PTE23 - BT_TX (MCU RX)
+GND
++5V
+NC (KEY pin not needed, leave NO CONNECT)

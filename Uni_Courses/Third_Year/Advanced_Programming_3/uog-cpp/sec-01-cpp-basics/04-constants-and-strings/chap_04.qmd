@@ -1,0 +1,278 @@
+---
+title: "Chapter 04: Constants and Strings in C++"
+author: Khiem Nguyen -- <khiem.nguyen@glasgow.ac.uk>
+    # <br>Lecturer in Multiscale Materials
+    # <br><khiem.nguyen@glasgow.ac.uk>
+author-meta: "Lecturer in Multiscale Materials"
+
+format: 
+    # other themes: 
+    #   beige, blood, dark, dracula, league, moon, 
+    #   night, serif, simple, sky, solarized
+    # highlight-style: monokai      # good for dark images
+    html:
+        output-file: "chap_04.html"
+        grid:
+            body-width: 1600px
+            margin-width: 300px
+            sidebar-width: 350px
+        embed-resources: true
+        theme: simple
+        highlight-style: github
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true     # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    pdf:
+        output-file: "chap_04.pdf"
+        embed-resources: true
+        theme: simple
+        highlight-style: github      # good for dark images
+        css: doc.css
+        number-sections: true
+        number-depth: 3
+        geometry:
+            - top=24px
+            - bottom=24px
+            - left=36px
+            - right=36px
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true # <-- remove white background in code blocks
+        code-block-border-left: false
+        toc: true
+        toc-depth: 3
+        toc-title: Contents
+    revealjs:
+        output-file: "chap_04_slide.html"
+        embed-resources: true
+        theme: simple
+        css: slide.css
+        number-sections: true
+        number-depth: 3
+        mouse-wheel: true
+        highlight-style: github
+        slide-number: true
+        title-slide-style: pandoc
+        echo: true
+        code-overflow: wrap
+        code-line-numbers: true
+        code-block-bg: true   # <-- remove white background in code blocks
+        code-block-border-left: false # optional: remove left border
+        toc: true
+        toc-depth: 1
+        toc-title: Contents
+
+---
+
+# Constant variables
+
+## Introduction to constants
+
+
+- A [**constant**]{style="color:red"} is a value that may not be changed during the program's execution.
+- C++ supports two different kinds of constants:
+    1. **named constants** are constant values that associated with an identifier.
+    2. **literal constants** are constant values that are not associated with an identifier.
+   
+In fact, it is not "too difficult" to understand the ideas behind *named constants* and *literal constants*. 
+
+$\ldots$ let us first study **named constants**
+
+## Types of named constants
+
+Three ways to define a named constant in C++:
+
+1. constant variables (covered in this lecture)
+2. object-like macros with substitution text (introduced in preprocessor)
+3. Enumerated constants (study later in topic "unscoped enumerations")
+
+> **Constant variables** are the most common type of named constant, and we will see their uses in many open-source libarires.
+
+In fact, we have been using non-constant variables -- see for example
+
+:::{#lst-non-constant-variables lst-cap="We have seen non-constant variables so far."}
+```{.cpp}
+int main()
+{   
+    double x { 42 };    // x is a non-constant variable
+    x = 24;     // change value of x to 24 using assignment operator
+    
+    double gravity {9.81};  // gravity is a non-constant variable
+    gravity = 1.89;         // BUT we don't want to change it.
+
+    double pi {3.1415926535}    // pi is a non-constant variable
+    pi = 3.0    // several engineers see pi as 3.0. BUT we don't want that...
+
+    return 0;
+}
+```
+:::
+
+## Declaring a constant variable
+
+To declare a constant variable, we place the `const` keyword (called a **const qualifier**) adjacent to the object's type
+
+```{.cpp}
+const double gravity { 9.81 };
+int const num_sides_in_square { 4 };
+```
+
+- C++ accepts the `const` qualifier either before or after the type.
+- It's more common to use `const` before the type (it better follows standard English convention -- think "a green ball" vs "a ball green")
+
+> Remark
+>
+> The type of an object includes the const qualifier. So when we define `const double gravity {9.81};` the type of gravity is `const double`.
+
+
+## `const` variables must be initialized
+
+- `const` variables *must be initialized* when we define them (of course that value cannot be changed via assignment)
+
+```{.cpp}
+int main()
+{
+    const double gravity;   // Error: const variables must be initialized
+    // Engineers may try this. 
+    gravity = 10;           // Error: const variables can not be changed
+
+    return 0;
+}
+```
+- `const` variables can be initialized from other variables (including non-const ones)
+
+::: {#lst-initialize_const_var lst-cap="Initialize const variables by using non-const variables" filename="`initialize_const_variables.cpp"}
+```{.cpp}
+{{< include ./cpp/initialize_const_variables.cpp >}}
+```
+:::
+
+## Naming const variables
+
+::: {.incremental}
+- Programmers who have transitioned from C often prefer underscored, upper-case names for const variables (e.g. `EARTH_GRAVITY`). 
+- More common in C++ is to use intercapped names with a "`k`" prefix (e.g. `kEarthGravity`).
+
+:::{.fragment}
+> - Because const variables act like normal variables (except they cannot be assigned to), there is no reason that they need a special naming convention. 
+> - The modern IDE easily pick the const qualifier up and tells us that piece of info.
+:::
+
+:::
+
+## Const function parameters
+
+- Function parameters can be made constants via the `const` keyword. 
+- Const function parameters are widely used in developing software. See, e.g., the following reference: [namespace]([namespaceGmsh](https://dealii.org/current/doxygen/deal.II/namespaceGmsh.html))
+- Marking a function parameter constant enlists the compiler's help to ensure the parameter's value cannot be changed inside the function.
+
+::: {#lst-const-func-parameters lst-cap="Const function parameters" filename="`const_func_parameters.cpp"}
+```{ .cpp}
+{{< include ./cpp/const_func_parameters.cpp >}}
+```
+:::
+
+
+## Const function parameters: Advice
+
+- In modern C++ we _do not_ make **value parameters** (value parameters vs reference parameters) `const` because we generally do not care if the function changes the vlaue of the parameter. It is just a copy that will be destroyed at the end of the function anyway.
+- The `const` keyword adds a small amount of unnecessary clutter to the function prototype.
+- We shall learn later two other ways to pass arguments to functions:
+    - pass by reference
+    - pass by address
+
+> **Best practice**
+>
+> Do NOT use `const` for _value parameters_.
+
+
+## Const return values
+
+- A function's return value may also be made const.
+- For fundamental types, the `const` qualifier on a return type is simply ignored -- The compiler may give a warning but it should run fine.
+- For other types (which we shall learn), _there is typically little point in returning const objects by value because they are temporary copies that will be destroyed anyway._
+
+::: {#lst-return-const-value lst-cap="About const function's return value"}
+```{.cpp}
+{{< include ./cpp/const_return_value.cpp >}}
+```
+:::
+
+> **Best pratice**
+>
+> Do NOT use `const` when _returning by value_.
+
+## const function parameters and const return value: Best practice Sumarry
+
+> **Best practice**
+>
+> - Do **NOT** use `const` for _value parameters_.
+> - Do **NOT** use `const` when _returning by value_.
+
+## Why variables should be made constant
+
+> [**If a variable can be made constant, it generally should be made constant.**]{style="color:blue"}
+
+This is important for a number of reasons:
+
+::: {.incremental}
+- [By making a variable constant, you ensure that the value cannot be changed accidentally.]{style="color:red"}
+- [It provides more opportunity for the compiler to optimize programs.]{style="color:red"}
+
+    When the compiler can assume a value isn’t changing, it is able to leverage more techniques to optimize the program, resulting in a compiled program that is smaller and faster.
+
+- [Most importantly, it reduces the overall complexity of our programs.]{style="color:red"}
+
+    When trying to determine what a section of code is doing or trying to debug an issue, we know that a const variable can’t have its value changed, so we don’t have to worry about whether its value is actually changing, what value it is changing to, and whether that new value is correct.
+
+- Every moving part in a system increases complexity and the risk of defect or failure. Non-constant variables are moving parts, while constant variables are not.
+:::
+
+:::{.fragment}
+> **Best practice**
+>
+> [Make variables constant whenever possible.]{style="color:blue"}
+> 
+> In fact, you will see that open-source libraries on Github mostly to strictly follow this practice
+:::
+
+# Literals
+
+## Literals
+
+::: {.fragment}
+### Literals { .mt-5}
+::: {.incremental}
+- Literals are values that are inserted directly into the code.
+- Just like objects have a type, all literals have a type. The type of a literal is deduced from the literal's value.
+:::
+:::
+
+::: {.fragment} 
+### Wait a minute { .mt-5}
+::: {.incremental}
+- There is much more to learn about _literals_, but it involves quite technical details.
+- It is very boring to teach and to learn in live lectures.
+- So, let us make it as a on-bed reading $\ldots$ 
+:::
+:::
+
+::: {.fragment}
+### Homework { .mt-5}
+> [**Gemini: Guided Learning**]{style="color:purple"}
+> 
+> Please use Gemini Guided Learning to learn more about this topic. 
+>
+> We will not spend much time on this topic in our course.
+:::
