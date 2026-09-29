@@ -50,7 +50,7 @@ def plot_time_domain(audio_raw, samplerate, name_of_plot, show_plot=True):
     plt.ylabel('Amplitude')
     plt.ylim(-1, 1)
     plt.grid()
-    plt.savefig(path_to_output + name_of_plot + '_time_domain.png', dpi=600) # [:-4 gets rid of .wav]
+    plt.savefig(path_to_output + name_of_plot + '_time_domain.pdf', dpi=600) # [:-4 gets rid of .wav]
     if show_plot:
         plt.show()
     plt.close()
@@ -76,7 +76,7 @@ def plot_frequency_domain(audio_raw, samplerate, name_of_plot, logascale=False, 
         frequency_axis[i] = i * (samplerate / N)
 
     # Convert y-axisto dB scale
-    audio_fft_log = 20 * np.log10(np.abs(audio_fft))
+    audio_fft_log = 20 * np.log10(np.abs(audio_fft) + 0.00000001) # Encountered log of zero so offset slightly
 
     # Plotting frequency domain
     if logascale:
@@ -93,7 +93,7 @@ def plot_frequency_domain(audio_raw, samplerate, name_of_plot, logascale=False, 
     plt.xlim(0, samplerate / 2)
 
     plt.grid()
-    plt.savefig(path_to_output + name_of_plot + '_frequency_domain.png', dpi=600) # [:-4 gets rid of .wav]
+    plt.savefig(path_to_output + name_of_plot + '_frequency_domain.pdf', dpi=600) # [:-4 gets rid of .wav]
     if show_plot:
         plt.show()
     plt.close()
@@ -152,12 +152,12 @@ def create_WAV_file(name_of_file, audio_array, samplerate):
 
 raw_audio, samplerate = extract_audio_from_file('Daniel_5cm.wav')
 
-plot_time_domain(raw_audio, samplerate, 'Daniel_5cm', show_plot=True)
-plot_frequency_domain(raw_audio, samplerate, 'Daniel_5cm', logascale=True, show_plot=True)
+plot_time_domain(raw_audio, samplerate, 'Daniel_5cm.wav', show_plot=True)
+plot_frequency_domain(raw_audio, samplerate, 'Daniel_5cm.wav', logascale=True, show_plot=True)
 
 # Filter Select Frequencies
 
-filtered_audio, filtered_fft, samplerate = filter_frequencies_from_file('Daniel_5cm.wav', 110, 130)
+filtered_audio, filtered_fft, samplerate = filter_frequencies_from_file('Daniel_5cm.wav', 250, 350)
 
 plot_time_domain(filtered_audio, samplerate, 'Daniel_5cm_filtered', show_plot=True)
 plot_frequency_domain(filtered_audio, samplerate, 'Daniel_5cm_filtered', logascale=True, show_plot=True)
