@@ -3,11 +3,11 @@
 import soundfile as sf
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # Source file path
 path_to_files = 'WAV_Files/'
 path_to_output = 'Output_Files/'
-
 
 def extract_audio_from_file(name_of_file):
     """ 
@@ -15,10 +15,39 @@ def extract_audio_from_file(name_of_file):
     """
 
     # Use the "soundfile" library to read the audio file
-    audio_raw, samplerate = sf.read(path_to_files + name_of_file)
+    audio_raw, samplerate = sf.read(path_to_files + name_of_file+ ".wav")
     audio_array = np.array(audio_raw)
 
     return audio_array, samplerate
+
+def fft_of_audio(audio_raw, samplerate):
+
+    audio_array = np.array(audio_raw)
+    audio_fft = np.fft.fft(audio_array)
+
+    N = len(audio_array) 
+
+    # Make empty freq. array of size N
+    frequency_axis = np.empty(N)
+
+    # Frequency resolution = Fs / N
+    # Frequency = k * resolution
+
+    # fill array with correct frequencies
+    for i in range(N):
+        frequency_axis[i] = i * (samplerate / N)
+
+    return audio_fft, frequency_axis
+
+def inverse_fft(audio_fft):
+    """
+    Converts an FFT back to the time domain using IFFT
+    """
+
+    # Conver back to time and take only real values, as real sound isn't imaginary :) (unlike my best friend :( )
+    audio_ifft = np.real(np.fft.ifft(audio_fft))
+
+    return audio_ifft
 
 
 # ===========================
@@ -55,25 +84,10 @@ def plot_time_domain(audio_raw, samplerate, name_of_plot, show_plot=True):
         plt.show()
     plt.close()
 
-def plot_frequency_domain(audio_raw, samplerate, name_of_plot, logascale=False, show_plot=True):
+def plot_frequency_domain(audio_fft, frequency_axis, samplerate, name_of_plot, logascale=False, show_plot=True):
     """
     Plots the frequency domain of an audio signal using an array from "soundfile"
     """
-
-    audio_array = np.array(audio_raw)
-    audio_fft = np.fft.fft(audio_array)
-
-    N = len(audio_array) 
-
-    # Make empty freq. array of size N
-    frequency_axis = np.empty(N)
-
-    # Frequency resolution = Fs / N
-    # Frequency = k * resolution
-
-    # fill array with correct frequencies
-    for i in range(N):
-        frequency_axis[i] = i * (samplerate / N)
 
     # Convert y-axisto dB scale
     audio_fft_log = 20 * np.log10(np.abs(audio_fft) + 0.00000001) # Encountered log of zero so offset slightly
@@ -103,37 +117,66 @@ def plot_frequency_domain(audio_raw, samplerate, name_of_plot, logascale=False, 
 #=== Filtering Functions ===
 #===========================
 
-def filter_frequencies_from_file(name_of_file, low_cutoff, high_cutoff, show_plot=True):
+def apply_hamming_window_function(input_array):
     """
-    Filters frequencies from an audio file using FFT and IFFT
+    Generates a Hamming window function of length N
     """
 
-    audio_raw, samplerate = sf.read(path_to_files + name_of_file)
-    audio_array = np.array(audio_raw)
+    N = len(input_array) # Number of samples
+    np.arange(N) # Array of integers from 0 to N-1
 
-    audio_fft = np.fft.fft(audio_array)
+    # This is the Mathematical Definition of the Hamming Window Function
+    hamming_window = 0.54 - 0.46 * np.cos(2 * np.pi * np.arange(N) / (N - 1))
 
-    N = len(audio_array) 
+    # Multiplication in the time domain is convolution in the frequency domain
+    windowed_input_array = input_array * hamming_window
 
-    # Make empty freq. array of size N
-    frequency_axis = np.empty(N)
+    return windowed_input_array
 
-    # Frequency resolution = Fs / N
-    # Frequency = k * resolution
-
-    # fill array with correct frequencies
-    for i in range(N):
-        frequency_axis[i] = i * (samplerate / N)
+def bandpass_filter(audio_fft, frequency_axis, low_cutoff, high_cutoff):
+    """
+    Filters frequencies using FFT and IFFT
+    """
 
     # === THIS IS THE FILTERING STEP ===
     # Leave only the frequencies between low_cutoff and high_cutoff, set the rest to 0
     audio_fft_filtered = np.where((frequency_axis >= low_cutoff) & (frequency_axis <= high_cutoff), audio_fft, 0)
 
-    # Convert back to time domain using inverse FFT
-    # Make sure the result is real only, as real sound isn't imaginary :)
-    audio_filtered = np.real(np.fft.ifft(audio_fft_filtered))
+    return audio_fft_filtered
 
-    return audio_filtered, audio_fft_filtered, samplerate
+
+def bandstop_filter(audio_fft, frequency_axis, low_cutoff, high_cutoff):
+    """
+    Filters frequencies using FFT and IFFT
+    """
+
+    # Leave only the frequencies between low_cutoff and high_cutoff, set the rest to 0
+    audio_fft_filtered = np.where((frequency_axis < low_cutoff) | (frequency_axis > high_cutoff), audio_fft, 0)
+
+    return audio_fft_filtered
+
+def band_multiplier(audio_fft, frequency_axis, low_cutoff, high_cutoff, multiplier):
+    """
+    Multiplies frequencies using FFT and IFFT
+    """
+
+    # Take the specified band, and multiply it by the multiplier, leave the rest unchanged
+    audio_fft_multiplied = np.where((frequency_axis >= low_cutoff) & (frequency_axis <= high_cutoff), audio_fft * multiplier, audio_fft)
+
+    return audio_fft_multiplied
+
+def audio_normalizer(audio_array):
+    """
+    Normalizes an audio array to the range of -1 to 1
+    """
+
+    # Find the max amplitude of the whole speech
+    max_amplitude = np.max(np.abs(audio_array))
+
+    # Divide all the values by the maximum to normalize
+    normalized_audio_array = audio_array / max_amplitude
+
+    return normalized_audio_array
 
 def create_WAV_file(name_of_file, audio_array, samplerate):
     """
@@ -141,27 +184,88 @@ def create_WAV_file(name_of_file, audio_array, samplerate):
     """
 
     # Save the audio array as a WAV file
-    sf.write(path_to_output + name_of_file, audio_array, samplerate)
+    sf.write(path_to_output + name_of_file + ".wav", audio_array, samplerate)
+
+#===========================
+#   === Aural Exciter ===
+#===========================
+
+def aural_exciter(audio_raw, samplerate,high_fundamental_frequency, low_fundamental_frequency, band_gap):
+    """
+    Enhances the voice in an audio signal using harmonic addition
+    """
+
+    # Make the FFT
+    audio_fft, frequency_axis = fft_of_audio(audio_raw, samplerate)
+
+    # First, isolate the two frequency bands
+    high_frequency_band = bandpass_filter(audio_fft, frequency_axis, high_fundamental_frequency - band_gap, high_fundamental_frequency + band_gap)
+    low_frequency_band = bandpass_filter(audio_fft, frequency_axis, low_fundamental_frequency - band_gap, low_fundamental_frequency + band_gap)
+
+    # Then, convert back to time domain and normalize
+    high_frequency_band_time = inverse_fft(high_frequency_band)
+    low_frequency_band_time = inverse_fft(low_frequency_band)
+
+    # Then, use a non-linear function to create harmonics in the time domain
+    high_frequency_band_time_harmonics = np.tanh(high_frequency_band_time)
+    low_frequency_band_time_harmonics = np.tanh(low_frequency_band_time)
+
+    # Now, fuse all three together
+    fused_audio = audio_raw + high_frequency_band_time_harmonics + low_frequency_band_time_harmonics
+
+    # Finally, normalize the fused audio
+    fused_audio = audio_normalizer(fused_audio)
+
+    return fused_audio
 
 
 #===========================
 #   === Main Program ===
 #===========================
 
-# Raw Time and Frequency Plots
+# ==== Raw Time and Frequency Plots ====
 
-raw_audio, samplerate = extract_audio_from_file('Daniel_5cm.wav')
+current_audio_name = 'Daniel_Vowels'
 
-plot_time_domain(raw_audio, samplerate, 'Daniel_5cm.wav', show_plot=True)
-plot_frequency_domain(raw_audio, samplerate, 'Daniel_5cm.wav', logascale=True, show_plot=True)
+raw_audio, samplerate = extract_audio_from_file(current_audio_name)
+fft_audio, frequency_axis = fft_of_audio(raw_audio, samplerate)
 
-# Filter Select Frequencies
+plot_time_domain(raw_audio, samplerate, current_audio_name + "_raw", show_plot=False)
 
-filtered_audio, filtered_fft, samplerate = filter_frequencies_from_file('Daniel_5cm.wav', 250, 350)
+# Use the window function to smooth the edges before plotting
+windowed_audio = apply_hamming_window_function(raw_audio)
+windowed_fft_audio, windowed_frequency_axis = fft_of_audio(windowed_audio, samplerate)
+plot_frequency_domain(windowed_fft_audio, windowed_frequency_axis, samplerate, current_audio_name + "_windowed", logascale=True, show_plot=True)
 
-plot_time_domain(filtered_audio, samplerate, 'Daniel_5cm_filtered', show_plot=True)
-plot_frequency_domain(filtered_audio, samplerate, 'Daniel_5cm_filtered', logascale=True, show_plot=True)
+# ==== Filtering Step ====
 
-create_WAV_file('Daniel_5cm_filtered.wav', filtered_audio, samplerate)
+# Enhance the harmonics of Daniel's voice
+for i in range(4):
+
+    fundamental_freq = 100  # Fundamental frequency of Daniel's voice in Hz
+    # MY VOWEL A IS 100 HZ????????
+
+    harmonic_freq = fundamental_freq * (i + 1) 
+    fft_audio = band_multiplier(fft_audio, frequency_axis, harmonic_freq - 10, harmonic_freq + 10, 0) # Enhance the harmonic frequency by 2x
+    fft_audio = band_multiplier(fft_audio, frequency_axis, harmonic_freq + (fundamental_freq*0.2), harmonic_freq + (fundamental_freq*0.8), 1) # Enhance the harmonic frequency by 2x
+
+filtered_fft = bandpass_filter(fft_audio, frequency_axis, 20, 20000) # Humans only hear from 20 - 20,000 Hz
+filtered_fft = bandstop_filter(filtered_fft, frequency_axis, 48, 52) # Remove main noise 
+
+# === Plot the filtered frequency domain ===
+
+plot_frequency_domain(filtered_fft, frequency_axis, samplerate, current_audio_name + "_filtered", logascale=True, show_plot=True)
+
+# == AURAL EXCITER ===
+
+excited_audio = aural_exciter(raw_audio, samplerate, 6000, 120, 10)
+inverse_filtered_audio = audio_normalizer(excited_audio)
+create_WAV_file(current_audio_name + "_aurally_excited", inverse_filtered_audio, samplerate)
+
+# ==== Export to WAV again to hear it!!!! ====
+
+inverse_filtered_audio = inverse_fft(filtered_fft)
+inverse_filtered_audio = audio_normalizer(inverse_filtered_audio)
+create_WAV_file(current_audio_name + "_inverse_filtered", inverse_filtered_audio, samplerate)
 
 
