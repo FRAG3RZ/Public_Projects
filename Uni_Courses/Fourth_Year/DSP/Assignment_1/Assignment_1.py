@@ -190,7 +190,7 @@ def create_WAV_file(name_of_file, audio_array, samplerate):
 #   === Aural Exciter ===
 #===========================
 
-def aural_exciter(audio_raw, samplerate,high_fundamental_frequency, low_fundamental_frequency, band_gap):
+def aural_exciter(audio_raw, samplerate, high_fundamental_frequency, low_fundamental_frequency, band_gap):
     """
     Enhances the voice in an audio signal using harmonic addition
     """
@@ -213,9 +213,6 @@ def aural_exciter(audio_raw, samplerate,high_fundamental_frequency, low_fundamen
     # Now, fuse all three together
     fused_audio = audio_raw + high_frequency_band_time_harmonics + low_frequency_band_time_harmonics
 
-    # Finally, normalize the fused audio
-    fused_audio = audio_normalizer(fused_audio)
-
     return fused_audio
 
 
@@ -230,7 +227,7 @@ current_audio_name = 'Daniel_Vowels'
 raw_audio, samplerate = extract_audio_from_file(current_audio_name)
 fft_audio, frequency_axis = fft_of_audio(raw_audio, samplerate)
 
-plot_time_domain(raw_audio, samplerate, current_audio_name + "_raw", show_plot=False)
+plot_time_domain(raw_audio, samplerate, current_audio_name + "_raw", show_plot=True)
 
 # Use the window function to smooth the edges before plotting
 windowed_audio = apply_hamming_window_function(raw_audio)
@@ -238,6 +235,8 @@ windowed_fft_audio, windowed_frequency_axis = fft_of_audio(windowed_audio, sampl
 plot_frequency_domain(windowed_fft_audio, windowed_frequency_axis, samplerate, current_audio_name + "_windowed", logascale=True, show_plot=True)
 
 # ==== Filtering Step ====
+
+# ==== STEP 2 ====
 
 # Enhance the harmonics of Daniel's voice
 for i in range(4):
@@ -258,9 +257,8 @@ plot_frequency_domain(filtered_fft, frequency_axis, samplerate, current_audio_na
 
 # == AURAL EXCITER ===
 
-excited_audio = aural_exciter(raw_audio, samplerate, 6000, 120, 10)
-inverse_filtered_audio = audio_normalizer(excited_audio)
-create_WAV_file(current_audio_name + "_aurally_excited", inverse_filtered_audio, samplerate)
+excited_audio = aural_exciter(raw_audio, samplerate, 1000, 120, 10)
+create_WAV_file(current_audio_name + "_aurally_excited", excited_audio, samplerate)
 
 # ==== Export to WAV again to hear it!!!! ====
 
