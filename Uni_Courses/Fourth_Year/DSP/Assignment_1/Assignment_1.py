@@ -31,6 +31,7 @@ def create_WAV_file(name_of_file, audio_array, samplerate):
     """
 
     # Convert [-1, 1] floating-point audio to 16-bit PCM
+    audio_array = np.clip(audio_array, -1.0, 1.0)
     audio_int16 = (audio_array * 32767).astype(np.int16)
 
     # Save the audio array as a WAV file
@@ -215,7 +216,7 @@ def band_multiplier(audio_fft, frequency_axis, samplerate, low_cutoff, high_cuto
 #===========================
 #   === Aural Exciter ===
 #===========================
-
+"""
 def aural_exciter(audio_raw, samplerate,high_fundamental_frequency, low_fundamental_frequency, band_gap, harmonic_gain = 10, mixer_gain = 0.5):
     """
     Enhances the voice in an audio signal using harmonic addition
@@ -223,6 +224,8 @@ def aural_exciter(audio_raw, samplerate,high_fundamental_frequency, low_fundamen
 
     # Make the FFT
     audio_fft, frequency_axis = fft_of_audio(audio_raw, samplerate)
+
+    # ============== APPLYING LOW AND HIGH-PASS FILTERS ============
 
     # First, isolate the two frequency bands
     high_frequency_band = bandpass_filter(audio_fft, frequency_axis, samplerate, high_fundamental_frequency - band_gap, high_fundamental_frequency + band_gap)
@@ -236,6 +239,7 @@ def aural_exciter(audio_raw, samplerate,high_fundamental_frequency, low_fundamen
     high_frequency_band_time = inverse_fft(high_frequency_band)
     low_frequency_band_time = inverse_fft(low_frequency_band)
 
+    # ============ GENERATING EXTRA HARMONICS ===============
     
     # Then, use a non-linear function to create harmonics in the time domain
     high_frequency_band_time_harmonics = np.tanh(harmonic_gain * high_frequency_band_time)
@@ -253,11 +257,61 @@ def aural_exciter(audio_raw, samplerate,high_fundamental_frequency, low_fundamen
     plot_frequency_domain(high_frequency_band_harmonics, frequency_axis, samplerate, current_audio_name + "_high_harmonics", logascale=True, show_plot=True)
     plot_frequency_domain(low_frequency_band_harmonics, frequency_axis, samplerate, current_audio_name + "_low_harmonics", logascale=True, show_plot=True)
 
+    # ========== FUSED AUDIO ============
+
     # Now, fuse all three together
     fused_audio = audio_raw + mixer_gain * high_frequency_band_time_harmonics + mixer_gain * low_frequency_band_time_harmonics  # Average the three signals together
 
-    return fused_audio
+    fused_audio_fft, frequency_axis = fft_of_audio(fused_audio, samplerate)
+    plot_frequency_domain(fused_audio_fft, frequency_axis, samplerate, current_audio_name + "_fused_frequencies", logascale=True, show_plot=True)
 
+    return fused_audio
+"""
+def aural_exciter(audio_raw, samplerate,
+                  harmonic_gain=5, mixer_gain=0.02):
+
+    # 1. Transform original recording
+    audio_fft, frequency_axis = fft_of_audio(
+        audio_raw, samplerate
+    )
+
+    # 2. Extract upper voice frequencies
+    input_band_fft = bandpass_filter(
+        audio_fft, frequency_axis, samplerate,
+        1500, 3000
+    )
+
+    input_band_time = inverse_fft(input_band_fft)
+
+    # 3. Generate new harmonics
+    distorted = np.tanh(
+        harmonic_gain * input_band_time
+    )
+
+    # 4. Transform distorted signal
+    harmonic_fft, frequency_axis = fft_of_audio(
+        distorted, samplerate
+    )
+
+    # 5. Select useful upper frequencies
+    harmonic_fft = bandpass_filter(
+        harmonic_fft, frequency_axis, samplerate,
+        3500, 8000
+    )
+
+    # 6. Convert selected harmonics to time domain
+    harmonics = inverse_fft(harmonic_fft)
+
+    # 7. Mix gently with original
+    fused_audio = audio_raw + mixer_gain * harmonics
+
+    # 8. Prevent clipping on export
+    peak = np.max(np.abs(fused_audio))
+
+    if peak > 1.0:
+        fused_audio = fused_audio / peak
+
+    return fused_audio
 
 #===========================
 #   === Main Program ===
@@ -284,7 +338,6 @@ plot_frequency_domain(windowed_fft_audio, windowed_frequency_axis, samplerate, c
 # ==== Filtering Step ====
 
 """
-
 # Enhance the harmonics of Daniel's voice
 for i in range(3):
 
@@ -304,12 +357,18 @@ plot_frequency_domain(filtered_fft, frequency_axis, samplerate, current_audio_na
 inverse_filtered_audio = inverse_fft(filtered_fft)
 create_WAV_file(current_audio_name + "_inverse_filtered", inverse_filtered_audio, samplerate)
 """
+
 #===========================
 #   ===   PART THREE   ===
 #===========================
 
 
 # ========= AURAL EXCITER =========
-
-excited_audio = aural_exciter(raw_audio, samplerate, 3000, 500, 50, harmonic_gain=3, mixer_gain=0.3)
+excited_audio = aural_exciter(
+    raw_audio,
+    samplerate,
+    2000, 100, 5,
+    harmonic_gain=10,
+    mixer_gain=0.1
+)
 create_WAV_file(current_audio_name + "_aurally_excited", excited_audio, samplerate)
