@@ -119,7 +119,7 @@ def plot_frequency_domain(audio_fft, frequency_axis, samplerate, name_of_plot, l
 
     # Cutt off the mirror frequencies (above Fs / 2)
     if logascale:
-        plt.xlim(1, samplerate / 2)
+        plt.xlim(1, samplerate / 2) # Log can't start at 0
     else:
         plt.xlim(0, samplerate / 2)
 
@@ -253,11 +253,20 @@ def aural_exciter(
     low_frequency_band_time = inverse_fft(low_frequency_band)
 
     # ============ GENERATING EXTRA HARMONICS ===============
+
+    # OPTION 1
     # HYPERBOLIC TANGENT
     
     # Then, use a non-linear function to create harmonics in the time domain
     high_frequency_band_time_harmonics = np.tanh(harmonic_gain * high_frequency_band_time)
     low_frequency_band_time_harmonics = np.tanh(harmonic_gain * low_frequency_band_time)
+
+    # OPTION 2
+    # SQUARE FUNCTION
+    """
+    high_frequency_band_time_harmonics = np.square(harmonic_gain * high_frequency_band_time)
+    low_frequency_band_time_harmonics = np.square(harmonic_gain * low_frequency_band_time)
+    """
 
     # ================= FILTERING THE EXTRA HARMONICS =================
 
@@ -291,7 +300,7 @@ def aural_exciter(
 #   === Main Program  ===
 #===========================
 
-for current_audio_name in ["Daniel_5cm", "Daniel_1m"]:
+for current_audio_name in ["Daniel_5cm", "Daniel_1m", "Daniel_Vowels", "Daniel_A_Vowel", "Daniel_Consonants", "Daniel_5cm_noise", "Daniel_5cm_noise_2"]:
 
     # Show the plots in Python
     show_plots = False
@@ -348,20 +357,20 @@ for current_audio_name in ["Daniel_5cm", "Daniel_1m"]:
         current_audio_name,
 
         # Input frequency bands - band_gap is the range around the frequency that is kept and "harmonicized"
-        high_fundamental_frequency=2250,
+        high_fundamental_frequency=3500,
         low_fundamental_frequency=100,
         band_gap_low_frequency=30, 
         band_gap_high_frequency=750, 
 
         # Output harmonic frequency bands - select only the useful harmonics to be reintroduced 
         high_harmonic_low_cutoff=3500,
-        high_harmonic_high_cutoff=8000,
+        high_harmonic_high_cutoff=12000,
         low_harmonic_low_cutoff=200,
         low_harmonic_high_cutoff=1500,
 
         # Gain of the harmonics and the gain of the mixer responsible for reintroducing the harmonics
         harmonic_gain=10,
         mixer_gain=0.05
-)
+    )
     create_WAV_file(current_audio_name + "_aurally_excited", excited_audio, samplerate)
 
