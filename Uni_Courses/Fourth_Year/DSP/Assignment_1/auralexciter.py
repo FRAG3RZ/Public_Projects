@@ -228,7 +228,7 @@ def aural_exciter(
     high_harmonic_low_cutoff, high_harmonic_high_cutoff,
     low_harmonic_low_cutoff, low_harmonic_high_cutoff,
     upper_band_harmonic_gain=10, lower_band_harmonic_gain=10,
-    mixer_gain=0.5,
+    lower_band_mixer_gain=0.5, upper_band_mixer_gain=0.5,
     show_plots = True
 ):
     """
@@ -273,10 +273,6 @@ def aural_exciter(
     low_frequency_band_time_harmonics = np.power(lower_band_harmonic_gain * low_frequency_band_time, 3)
     """
     
-    # Check the RMS of the generated harmonics
-    print("Upper harmonic RMS:", rms(high_frequency_band_time_harmonics))
-    print("Lower harmonic RMS:", rms(low_frequency_band_time_harmonics))
-    
     # ================= FILTERING THE EXTRA HARMONICS =================
     
     # Then, convert back to frequency domain to filter the harmonics
@@ -294,16 +290,20 @@ def aural_exciter(
     # Return to time domain
     high_frequency_band_time_harmonics = inverse_fft(high_fft)
     low_frequency_band_time_harmonics = inverse_fft(low_fft)
+
+    # Check the RMS of generated, and filtered, harmonics
+    print("Upper harmonic RMS:", rms(high_frequency_band_time_harmonics))
+    print("Lower harmonic RMS:", rms(low_frequency_band_time_harmonics))
     
     # ========== FUSED AUDIO & RMS NORMALIZATION ============
 
     # Remove the unwanted frequencies from the original audio
     audio_fft = bandpass_filter(audio_fft, frequency_axis, samplerate, 20, 20000) # Humans only hear from 20 - 20,000 Hz
-    audio_fft = bandstop_filter(audio_fft, frequency_axis, samplerate, 0, 90) # Remove the "hum" of the environment
+    audio_fft = bandstop_filter(audio_fft, frequency_axis, samplerate, 0, 60, sigma=10) # Remove the "hum" of the environment (lower sigma to not eat away at the bass of the voice)
     filtered_audio = inverse_fft(audio_fft)
 
     # ===== Now, fuse all three together in the mixer =====
-    fused_audio = filtered_audio + mixer_gain * high_frequency_band_time_harmonics + mixer_gain * low_frequency_band_time_harmonics 
+    fused_audio = filtered_audio + upper_band_mixer_gain * high_frequency_band_time_harmonics + lower_band_mixer_gain * low_frequency_band_time_harmonics 
 
     # RMS of the fused audio
     fused_rms = rms(fused_audio)
@@ -330,10 +330,7 @@ def aural_exciter(
 def main():
 
     show_plots = True
-
     global path_to_output
-    path_to_output = f"Output_Files/{current_audio_name}/"
-    os.makedirs(path_to_output, exist_ok=True)
 
     # ============================================
     # ========= 5cm audio enhancement =============
@@ -341,33 +338,38 @@ def main():
         
     current_audio_name = "original_speech_5cm"
 
+    path_to_output = f"Output_Files/{current_audio_name}/"
+    os.makedirs(path_to_output, exist_ok=True)
+
     # Extract the time domain and frequency domain from the WAV
     raw_audio, samplerate = extract_audio_from_file(current_audio_name)
-        
+
     excited_audio = aural_exciter(
         raw_audio,
         samplerate,
         current_audio_name,
 
-        # Input frequency bands - band_gap is the range around the frequency that is kept and "harmonicized"
-        high_fundamental_frequency=2000,
-        low_fundamental_frequency=100,
-        band_gap_low_frequency=20, 
-        band_gap_high_frequency=200, 
+        # Input frequency bands
+        high_fundamental_frequency=2300,
+        low_fundamental_frequency=120,
+        band_gap_low_frequency=40,
+        band_gap_high_frequency=300,
 
-        # Output harmonic frequency bands - select only the useful harmonics to be reintroduced 
-        high_harmonic_low_cutoff=4000,
-        high_harmonic_high_cutoff=12000,
-        low_harmonic_low_cutoff=400,
-        low_harmonic_high_cutoff=1200,
+        # Output harmonic frequency bands
+        high_harmonic_low_cutoff=6000,
+        high_harmonic_high_cutoff=8000,
+        low_harmonic_low_cutoff=250,
+        low_harmonic_high_cutoff=850,
 
-        # Gain of the harmonics and the gain of the mixer responsible for reintroducing the harmonics
+        # Harmonic generation and mixing
         upper_band_harmonic_gain=5,
-        lower_band_harmonic_gain=10,
-        mixer_gain=0.2,
+        lower_band_harmonic_gain=6,
+        lower_band_mixer_gain=0.6,
+        upper_band_mixer_gain=0.5,
 
         show_plots=show_plots
     )
+
     create_WAV_file("exciter_speech", excited_audio, samplerate)
 
 if __name__ == "__main__":

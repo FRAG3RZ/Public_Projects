@@ -220,7 +220,7 @@ def band_multiplier(audio_fft, frequency_axis, samplerate,
 
 def main():
 
-    show_plots = False
+    show_plots = True
 
     # Make sure the proper output path is used
     global path_to_output
@@ -240,29 +240,35 @@ def main():
     fft_audio, frequency_axis = fft_of_audio(raw_audio, samplerate)
 
     # ====== Settings found from the Mixer in the DSP Rankine Lab =======
+    # ===== Combined with settings inspired by the SM58 microphone ======
 
     # Low-frequency bass
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 100, 200, dB_gain=3.5, sigma=20)
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 280, 380, dB_gain=3.5, sigma=40)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 90, 110, dB_gain=-2, sigma=20)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 190, 210, dB_gain=1, sigma=20)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 290, 310, dB_gain=3, sigma=50)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 390, 410, dB_gain=3, sigma=50)
 
     # Reduce boxiness without removing too much -> high attenuation leads to "dull" voice
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 600, 1000, dB_gain=-4, sigma=120)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 700, 900, dB_gain=-3, sigma=50)
 
     # High-frequency presence boost -> resonanted quite well with Daniel's voice
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 7500, 8500, dB_gain=5, sigma=250)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 3000, 4500, dB_gain=3, sigma=250)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 7500, 8500, dB_gain=4, sigma=200)
 
-    # ====== Settings mirrored from the SM58 microphone =======
+    
 
     # High-frequency roll-off -> higher sigma to be smoother
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 11000, 13000, dB_gain=-4, sigma=500)
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 13500, 20000, dB_gain=-5, sigma=1000)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 11000, 13000, dB_gain=-3, sigma=500)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 13500, 20000, dB_gain=-5, sigma=500)
 
     # Noise filtering
     filtered_fft = bandpass_filter(fft_audio, frequency_axis, samplerate, 20, 20000, sigma=20) # Inaudible to humans anyway
-    filtered_fft = bandstop_filter(filtered_fft, frequency_axis, samplerate, 0, 65, sigma=10) # Removes most background "hum", human voice isn't present there anyway
+    filtered_fft = bandstop_filter(filtered_fft, frequency_axis, samplerate, 0, 70, sigma=10) # Removes most background "hum", human voice isn't present there anyway
 
-    # Inverse FFT & Export
+    # Inverse FFT 
     inverse_filtered_audio = inverse_fft(filtered_fft)
+
+    # Export
     create_WAV_file("enhanced_speech_5cm", inverse_filtered_audio, samplerate)
 
     # =========== Plotting ============
@@ -272,10 +278,16 @@ def main():
     windowed_filtered_fft, frequency_axis = fft_of_audio(windowed_filtered_audio, samplerate)
 
     # Plot the windowed spectrum
-    plot_frequency_domain(windowed_filtered_fft, frequency_axis, samplerate, "_enhanced_speech_5cm_linear_filtered_spectrum", logascale=True, show_plot=show_plots)
+    plot_frequency_domain(windowed_filtered_fft, frequency_axis, samplerate, "enhanced_speech_5cm_linear_filtered_spectrum", logascale=True, show_plot=show_plots)
+
+
+
 
 
     # ============================================================================================================================================================
+
+
+
 
 
     # ============================================
@@ -293,30 +305,32 @@ def main():
     fft_audio, frequency_axis = fft_of_audio(raw_audio, samplerate)
 
     # ====== Settings found from the Mixer in the DSP Rankine Lab =======
+    # ===== Combined with settings inspired by the SM58 microphone ======
 
-    # Low-frequency bass
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 100, 200, dB_gain=6, sigma=40)
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 280, 380, dB_gain=6, sigma=50)
+    # Low-frequency bass - preserve natural vocal body
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 70, 100, dB_gain=5, sigma=20)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 190, 210, dB_gain=5, sigma=20)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 250, 450, dB_gain=5, sigma=80)
 
-    # Reduce boxiness without removing too much -> high attenuation leads to "dull" voice
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 600, 1000, dB_gain=-3, sigma=120)
+    # Gentle reduction of boxiness
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 600, 800, dB_gain=-1, sigma=100)
 
-    # High-frequency presence boost -> resonanted quite well with Daniel's voice
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 7500, 8500, dB_gain=5, sigma=500)
+    # Gentle presence without excessive sibilance
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 2500, 4500, dB_gain=1.5, sigma=300)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 7500, 8500, dB_gain=1, sigma=300)
 
-    # ====== Settings mirrored from the SM58 microphone =======
-
-    # High-frequency roll-off -> higher sigma to be smoother
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 11000, 13000, dB_gain=-2, sigma=500)
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 13500, 20000, dB_gain=-5, sigma=500)
+    # Gentle high-frequency noise reduction
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 13500, 20000, dB_gain=-3, sigma=500)
 
     # Noise filtering
-    filtered_fft = bandpass_filter(fft_audio, frequency_axis, samplerate, 20, 20000, sigma=20) # Inaudible to humans anyway
-    filtered_fft = bandstop_filter(filtered_fft, frequency_axis, samplerate, 0, 65, sigma=10) # Removes most background "hum", human voice isn't present there anyway
+    filtered_fft = bandpass_filter(fft_audio, frequency_axis, samplerate, 20, 20000, sigma=20)
+    filtered_fft = bandstop_filter(filtered_fft, frequency_axis, samplerate, 0, 65, sigma=10)
 
-    # Inverse FFT & Export
+    # Inverse FFT
     inverse_filtered_audio = inverse_fft(filtered_fft)
-    create_WAV_file(current_audio_name + "enhanced_speech_1m", inverse_filtered_audio, samplerate)
+
+    # Export
+    create_WAV_file("enhanced_speech_1m", inverse_filtered_audio, samplerate)
 
     # =========== Plotting ============
 
@@ -325,7 +339,7 @@ def main():
     windowed_filtered_fft, frequency_axis = fft_of_audio(windowed_filtered_audio, samplerate)
 
     # Plot the windowed spectrum
-    plot_frequency_domain(windowed_filtered_fft, frequency_axis, samplerate, "_enhanced_speech_1m_linear_filtered_spectrum", logascale=True, show_plot=show_plots)
+    plot_frequency_domain(windowed_filtered_fft, frequency_axis, samplerate, "enhanced_speech_1m_linear_filtered_spectrum", logascale=True, show_plot=show_plots)
     
 
 if __name__ == "__main__":
