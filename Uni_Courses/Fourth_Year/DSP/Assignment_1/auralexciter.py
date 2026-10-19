@@ -18,10 +18,10 @@ def rms(x):
 
 def extract_audio_from_file(name_of_file):
     """ 
-    Extracts audio from a WAV file using "soundfile" and returns it as an array
+    Extracts audio from a WAV file using "scipy" and returns it as an array
     """
 
-    # Use the "soundfile" library to read the audio file
+    # Use the "scipy" library to read the audio file
     samplerate, audio_raw = wavfile.read(path_to_files + name_of_file + ".wav")
     audio_array = np.array(audio_raw)
     audio_array = audio_array / 32768.0  # Normalize the audio array to -1/1 (0 dB), use 2^15 = 32768 for 16-bit audio
@@ -90,7 +90,7 @@ def apply_hamming_window_function(input_array):
 
 def plot_time_domain(audio_array, samplerate, name_of_plot, show_plot=True):
     """ 
-    Plots the time domain of an audio signal using an array from "soundfile"
+    Plots the time domain of an audio signal using an array from "scipy"
     """
 
     # Calculate the maximum amplitude of the audio signal (normalized to -1/1 but still indicates the loudness for comparison)
@@ -115,7 +115,7 @@ def plot_time_domain(audio_array, samplerate, name_of_plot, show_plot=True):
 
 def plot_frequency_domain(audio_fft, frequency_axis, samplerate, name_of_plot, logascale=False, show_plot=True):
     """
-    Plots the frequency domain of an audio signal using an array from "soundfile"
+    Plots the frequency domain of an audio signal using an array from "scipy"
     """
 
     # Convert y-axis to dB scale
@@ -136,7 +136,7 @@ def plot_frequency_domain(audio_fft, frequency_axis, samplerate, name_of_plot, l
     plt.xlim(1, samplerate / 2) # Log can't start at 0
 
     plt.grid()
-    plt.savefig(path_to_output + name_of_plot + '_frequency_domain.pdf') # [:-4 gets rid of .wav]
+    plt.savefig(path_to_output + name_of_plot + '_frequency_domain.svg') # [:-4 gets rid of .wav]
     if show_plot:
         plt.show()
     plt.close()
@@ -272,7 +272,6 @@ def aural_exciter(
     high_frequency_band_time_harmonics = np.power(upper_band_harmonic_gain * high_frequency_band_time, 3)
     low_frequency_band_time_harmonics = np.power(lower_band_harmonic_gain * low_frequency_band_time, 3)
     """
-    
     # ================= FILTERING THE EXTRA HARMONICS =================
     
     # Then, convert back to frequency domain to filter the harmonics
@@ -282,10 +281,10 @@ def aural_exciter(
     # Select useful harmonic regions
     high_fft = bandpass_filter(high_fft, frequency_axis, samplerate, high_harmonic_low_cutoff, high_harmonic_high_cutoff)
     low_fft = bandpass_filter(low_fft, frequency_axis, samplerate, low_harmonic_low_cutoff, low_harmonic_high_cutoff)
-    
-    # Check that harmonics are created
-    plot_frequency_domain(high_fft, frequency_axis, samplerate, name_of_audio + "_06_upper_band_generated_harmonics", logascale=True, show_plot=show_plots)
-    plot_frequency_domain(low_fft, frequency_axis, samplerate, name_of_audio + "_07_lower_band_generated_harmonics", logascale=True, show_plot=show_plots)
+
+    # Check that harmonics are created and filtered
+    plot_frequency_domain(high_fft, frequency_axis, samplerate, "_06_higher_band_harmonics", logascale=True, show_plot=show_plots)
+    plot_frequency_domain(low_fft, frequency_axis, samplerate, "_07_lower_band_harmonics", logascale=True, show_plot=show_plots)
     
     # Return to time domain
     high_frequency_band_time_harmonics = inverse_fft(high_fft)
@@ -353,7 +352,7 @@ def main():
         high_fundamental_frequency=2300,
         low_fundamental_frequency=120,
         band_gap_low_frequency=40,
-        band_gap_high_frequency=300,
+        band_gap_high_frequency=50,
 
         # Output harmonic frequency bands
         high_harmonic_low_cutoff=6000,
@@ -369,7 +368,6 @@ def main():
 
         show_plots=show_plots
     )
-
     create_WAV_file("exciter_speech", excited_audio, samplerate)
 
 if __name__ == "__main__":

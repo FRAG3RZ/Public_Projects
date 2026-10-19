@@ -18,10 +18,10 @@ def rms(x):
 
 def extract_audio_from_file(name_of_file):
     """ 
-    Extracts audio from a WAV file using "soundfile" and returns it as an array
+    Extracts audio from a WAV file using "scipy" and returns it as an array
     """
 
-    # Use the "soundfile" library to read the audio file
+    # Use the "scipy" library to read the audio file
     samplerate, audio_raw = wavfile.read(path_to_files + name_of_file + ".wav")
     audio_array = np.array(audio_raw)
     audio_array = audio_array / 32768.0  # Normalize the audio array to -1/1 (0 dB), use 2^15 = 32768 for 16-bit audio
@@ -90,7 +90,7 @@ def apply_hamming_window_function(input_array):
 
 def plot_time_domain(audio_array, samplerate, name_of_plot, show_plot=True):
     """ 
-    Plots the time domain of an audio signal using an array from "soundfile"
+    Plots the time domain of an audio signal using an array from "scipy"
     """
 
     # Calculate the maximum amplitude of the audio signal (normalized to -1/1 but still indicates the loudness for comparison)
@@ -115,7 +115,7 @@ def plot_time_domain(audio_array, samplerate, name_of_plot, show_plot=True):
 
 def plot_frequency_domain(audio_fft, frequency_axis, samplerate, name_of_plot, logascale=False, show_plot=True):
     """
-    Plots the frequency domain of an audio signal using an array from "soundfile"
+    Plots the frequency domain of an audio signal using an array from "scipy"
     """
 
     # Convert y-axis to dB scale
@@ -151,7 +151,7 @@ def main():
     # Make sure the proper output path is used
     global path_to_output
      
-    for current_audio_name in ["original_speech_5cm", "original_speech_1m" ]:
+    for current_audio_name in ["original_speech_5cm", "original_speech_1m"]:
 
         show_plots = True
             
@@ -165,7 +165,6 @@ def main():
 
         # Extract the time domain and frequency domain from the WAV
         raw_audio, samplerate = extract_audio_from_file(current_audio_name)
-        fft_audio, frequency_axis = fft_of_audio(raw_audio, samplerate)
 
         # Use the window function to smooth the edges before plotting the FFT (shows better frequency domain)
         windowed_audio = apply_hamming_window_function(raw_audio)

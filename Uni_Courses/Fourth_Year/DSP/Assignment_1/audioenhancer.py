@@ -18,10 +18,10 @@ def rms(x):
 
 def extract_audio_from_file(name_of_file):
     """ 
-    Extracts audio from a WAV file using "soundfile" and returns it as an array
+    Extracts audio from a WAV file using "scipy" and returns it as an array
     """
 
-    # Use the "soundfile" library to read the audio file
+    # Use the "scipy" library to read the audio file
     samplerate, audio_raw = wavfile.read(path_to_files + name_of_file + ".wav")
     audio_array = np.array(audio_raw)
     audio_array = audio_array / 32768.0  # Normalize the audio array to -1/1 (0 dB), use 2^15 = 32768 for 16-bit audio
@@ -90,7 +90,7 @@ def apply_hamming_window_function(input_array):
 
 def plot_time_domain(audio_array, samplerate, name_of_plot, show_plot=True):
     """ 
-    Plots the time domain of an audio signal using an array from "soundfile"
+    Plots the time domain of an audio signal using an array from "scipy"
     """
 
     # Calculate the maximum amplitude of the audio signal (normalized to -1/1 but still indicates the loudness for comparison)
@@ -108,14 +108,14 @@ def plot_time_domain(audio_array, samplerate, name_of_plot, show_plot=True):
     plt.ylabel('Amplitude')
     plt.ylim(-1, 1)
     plt.grid()
-    plt.savefig(path_to_output + name_of_plot + '_time_domain.pdf') # [:-4 gets rid of .wav]
+    plt.savefig(path_to_output + name_of_plot + '_time_domain.svg') # [:-4 gets rid of .wav]
     if show_plot:
         plt.show()
     plt.close()
 
 def plot_frequency_domain(audio_fft, frequency_axis, samplerate, name_of_plot, logascale=False, show_plot=True):
     """
-    Plots the frequency domain of an audio signal using an array from "soundfile"
+    Plots the frequency domain of an audio signal using an array from "scipy"
     """
 
     # Convert y-axis to dB scale
@@ -136,7 +136,7 @@ def plot_frequency_domain(audio_fft, frequency_axis, samplerate, name_of_plot, l
     plt.xlim(1, samplerate / 2) # Log can't start at 0
 
     plt.grid()
-    plt.savefig(path_to_output + name_of_plot + '_frequency_domain.pdf') # [:-4 gets rid of .wav]
+    plt.savefig(path_to_output + name_of_plot + '_frequency_domain.svg') # [:-4 gets rid of .wav]
     if show_plot:
         plt.show()
     plt.close()
@@ -243,8 +243,8 @@ def main():
     # ===== Combined with settings inspired by the SM58 microphone ======
 
     # Low-frequency bass
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 90, 110, dB_gain=-2, sigma=20)
-    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 190, 210, dB_gain=1, sigma=20)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 90, 110, dB_gain=1, sigma=20)
+    fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 190, 210, dB_gain=-1, sigma=20)
     fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 290, 310, dB_gain=3, sigma=50)
     fft_audio = band_multiplier(fft_audio, frequency_axis, samplerate, 390, 410, dB_gain=3, sigma=50)
 
@@ -339,7 +339,7 @@ def main():
     windowed_filtered_fft, frequency_axis = fft_of_audio(windowed_filtered_audio, samplerate)
 
     # Plot the windowed spectrum
-    plot_frequency_domain(windowed_filtered_fft, frequency_axis, samplerate, "enhanced_speech_1m_linear_filtered_spectrum", logascale=True, show_plot=show_plots)
+    plot_frequency_domain(windowed_filtered_fft, frequency_axis, samplerate, "Linearly Enhanced and Filtered 1m recording", logascale=True, show_plot=show_plots)
     
 
 if __name__ == "__main__":
