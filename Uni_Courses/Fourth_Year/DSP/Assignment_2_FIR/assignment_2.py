@@ -82,6 +82,42 @@ def apply_hamming_window_function(input_array):
 
     return windowed_input_array
 
+# A CircularBuffer handler to speed up the coefficient buffer, and not have to shift the whole buffer each calculation
+class CircularBuffer:
+    def __init__(self, size):
+        self.size = size
+        self.buffer = np.zeros(size) # Fill the buffer with zeros first
+        self.start = 0 
+        self.count = 0
+
+    def append(self, item):
+        """
+        Uses the internal variables to correctly loop through the buffer
+        """
+
+        # Assign the new value, "item", into the correct position using the counter modulo'd with the total size
+        self.buffer[(self.start + self.count) % self.size] = item 
+
+        # The main looping logic
+        if self.count == self.size:
+            # If the buffer is full, "count == size", then use the "start" variable to point to the correct position to be overriden
+            self.start = (self.start + 1) % self.size  # Overwrite oldest
+        else:
+            # Else the buffer isn't full yet, so keep increasing "count"
+            self.count += 1
+    
+    def get_item(self, position):
+        """
+        Calculates the correct index based on the intended position argument
+        To return the correct element
+        """
+        
+        # Need the "-1" to account for the fact "start + count" points to the next item to be overriden, 
+        # NOT the most recent addition
+        index = (self.start + self.count - 1 - position) % self.size
+
+        return self.buffer[index]
+
 
 # ===========================
 # === Plotting Functions ====
@@ -153,7 +189,7 @@ def calculate_FIR_coefficients(bandstop_frequency_array, sampling_rate, remove_D
     """
 
     # Calculate M from sampling rate
-    # The higher the M, the larger the frequency resolution (better), but the larger the delay (worse)
+    # The higher the M, the smaller the frequency resolution (better), but the larger the delay (worse)
     # For ECG readings, a delay of ~1-2 seconds by default is reasonable to allow a doctor to examine the ECG in ~real-time
     # Thus:
     maximum_delay_samples = int(maximum_delay_seconds * sampling_rate)
@@ -175,9 +211,9 @@ def calculate_FIR_coefficients(bandstop_frequency_array, sampling_rate, remove_D
         k1 = int( (stopband[0] / sampling_rate) * M)
         k2 = int( (stopband[1] / sampling_rate) * M)
 
+         # always maintains symmetry around the M/2 point -> linear phase filter to maintain constant group delay!
         final_frequency_window[k1: k2+1] = 0 # zero out stopband in the shared frequency window
         final_frequency_window[M - k2: M - k1+1] = 0 # zero out mirror stopband in the shared frequency window
-        # always maintains symmetry around the M/2 point -> linear phase filter to maintain constant group delay!
 
     if remove_DC:
         final_frequency_window[0] = 0 # zero out first tap -> DC HAS NO MIRROR!
@@ -199,7 +235,7 @@ def calculate_FIR_coefficients(bandstop_frequency_array, sampling_rate, remove_D
     h[middle : M] = x[0 : middle + 1]
 
     # Smooth out the edges of the Impulse Response for better filtering
-    #h = apply_hamming_window_function(h)
+    h = apply_hamming_window_function(h)
 
     return h
 
@@ -208,7 +244,7 @@ class FIRfilter:
     def __init__(self,_coefficients):
         self.tap_number = len(_coefficients) # Initialize M to the size of the coefficient array
         self.FIR_coefficients = _coefficients # Initialize the coefficients to the ones passed to the contructor
-        self.data_buffer = np.zeros(self.tap_number) # prepare the Impulse Response buffer of length M -> it starts empty
+        self.data_buffer = CircularBuffer(self.tap_number) # prepare the Impulse Response CircularBuffer class of length M -> it starts empty by default
 
     # Take in the latest value and output the filter result
     def doFilter(self, latest_data):
@@ -216,21 +252,17 @@ class FIRfilter:
         In the bandstop filter implementation, 
         The delay buffer stores the signal and uses pre-taught coefficients to remove unwanted noise
         """
-        # loop accross the buffer up to M-1
-        for i in range(self.tap_number - 1): 
 
-            # Shift the whole buffer to the right by one -> make space for the new data, and discard last number
-            self.data_buffer[self.tap_number - i - 1] = self.data_buffer[self.tap_number - i - 2]
-
-        # Fill the empty first slot with the latest data
-        self.data_buffer[0] = latest_data
+        # Append the latest value to the circular buffer
+        # The class internally keeps track of the pointer position and overides the correct value
+        self.data_buffer.append(latest_data)
 
         # Prepare the sum -> scalar value (the filter output)
         sum = 0
 
         # Multiply, and sum, the corresponding data and n-delay pairs
         for i in range(self.tap_number):
-            sum += self.data_buffer[i] * self.FIR_coefficients[i]
+            sum += self.data_buffer.get_item(i) * self.FIR_coefficients[i]
 
         return sum 
 
@@ -252,7 +284,7 @@ class FIRfilter:
         # Then, update all FIR coefficients
         for i in range (self.tap_number):
             # implement deltaH = mu * error * x(n - M)
-            self.FIR_coefficients[i] += learningRate * error * self.data_buffer[i]
+            self.FIR_coefficients[i] += learningRate * error * self.data_buffer.get_item(i)
 
         return error
 
@@ -294,6 +326,7 @@ def main():
         # Prepare the stopbands -> remove DC and remove mains noise
         stopbands = np.array([
                     [45, 55],     # Remove 50 Hz interference
+                    [0.1, 0.5]    # Remove DC wander and other factors like breathing
                 ])
 
         FIR_coefficients = calculate_FIR_coefficients(stopbands, Fs, maximum_delay_seconds=1)
