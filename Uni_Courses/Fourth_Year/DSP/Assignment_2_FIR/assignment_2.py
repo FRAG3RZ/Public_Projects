@@ -120,16 +120,14 @@ def kaiser_variable_helper(A, deltaOmega):
     else:
         beta = 0
 
-    # Cast to integer for later calculations, and add 1 because the filter order should be larger than the calculated minimum
-    filter_order = int((A - 8) / (2.285 * deltaOmega)) + 1 
-
-    tap_number = filter_order + 1
+    # Cast to integer for later calculations, and add 1 because int() rounds down, and we want an M larger than the "minimum" recommended
+    M = int((A - 8) / (2.285 * deltaOmega)) + 1 
 
     # Ensure the FIR filter has an odd number of taps, so the middle index lays at an integer, and NOT a half
-    if tap_number % 2 == 0:
-        tap_number += 1
+    if M % 2 == 0:
+        M += 1
 
-    return tap_number, beta
+    return M, beta
 
 
 def kaiser_window_function(h, beta, alpha):
@@ -256,7 +254,7 @@ def calculate_FIR_coefficients(bandstop_frequency_array, sampling_rate, remove_D
     M, beta = kaiser_variable_helper(side_lobe_decay_dB, transition_width_rad)
 
     # Also report the resulting delay and resolution
-    group_delay = (M - 1) / (2*sampling_rate)   
+    group_delay = M / (2*sampling_rate)   
     print(f"\nThe Kaiser-calculated tap number, M, is: {M} \n\t resulting in a frequency resolution of: {(sampling_rate / M ):0.3f} Hz \n\t and group delay of: {group_delay} seconds\n")
 
     # Calculate the middle index (M is always odd) -> cast to integer to round down to the correct index
@@ -486,7 +484,7 @@ def main():
     heart_rates = []
     heart_rate_times = []
 
-    # Calculate the intervals between each index using the sampling frequency
+    # Calculate the time interval between consecutive detected R-peaks
     for i in range(1, len(corrected_peak_indexes)):
 
         # Get the current and previous R-peak timestamps
