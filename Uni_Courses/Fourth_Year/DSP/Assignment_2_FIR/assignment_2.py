@@ -34,7 +34,10 @@ def Load_ECG_Data(name_of_file):
     # Extract time and ECG (time is first column, actual data is 12th)
     # Both are one-dimensional arrays
     time = data[:, 0]
-    ecg = data[:, 11]
+    ecg = data[:, 8]
+
+    # Convert to miliVolts
+    ecg *= 1000
 
     sampling_frequency_Hz = 1 / (time[1] - time[0]) # Use Fs = 1 / deltaT 
 
@@ -151,11 +154,15 @@ def detect_R_peaks(filter_output, Fs):
     Returns an array of sample numbers corresponding to detected R peaks in the input array
     """
 
+    # MAKE THIS CAUSAL -> USE SIMPLE MAX DETECTION AND THEN SLOW SAWTOOTH DECAY UNTIL THE MAX IS REACHED AGAIN\
+    # every time step decrease the decay max = max - 0.01*max
+
+
     # Ignore peaks smaller than 25% of the maximum response
     # An threshold adaptive to different ECG samples is more useful than a hard-set number, as different people may have differing ECG amplitudes
     threshold = 0.25 * np.max(filter_output)
 
-    # Assume that a a human's  peak heart rate is 220 bpm, not accoutning for age
+    # Assume that a a human's peak heart rate is 220 bpm, not accoutning for age
     min_sample_distance = int(60 / 220 * Fs)
 
     peak_indices = []
@@ -184,11 +191,11 @@ def detect_R_peaks(filter_output, Fs):
 # === Plotting Functions ====
 # ===========================
 
-def plot_time_domain(data_array, time_axis, name_of_plot, show_plot=True, y_label='Amplitude'):
+def plot_time_domain(data_array, time_axis, name_of_plot, show_plot=True, y_label='Voltage (mV)'):
     """ 
     Plots the time domain of a signal using its array
     """
-
+    
     # Plotting time domain - assume that the ECG data already contains a time axis 
     plt.plot(time_axis, data_array)
     plt.title(f'{name_of_plot}')
@@ -209,12 +216,12 @@ def plot_frequency_domain(fft, frequency_axis, samplerate, name_of_plot, show_pl
     if normalize:
         fft = fft / len(fft)
 
-    # Convert y-axis to dB scale
-    fft_log = 20 * np.log10(np.abs(fft) + 1e-14) # Encountered log of zero so offset slightly by a very small number to avoid 0 division
-
+    # FFT is done in voltage
+    fft_voltage = np.abs(fft)
+    
     # Plotting frequency domain
-    plt.plot(frequency_axis, fft_log)
-    plt.ylabel('Magnitude (dB)')
+    plt.plot(frequency_axis, fft_voltage)
+    plt.ylabel('Voltage (mV))')
     plt.title(f'{name_of_plot}')
     plt.xlabel('Frequency (Hz)')
 
@@ -385,7 +392,7 @@ def main():
     # Prepare the stopbands -> remove DC and remove mains noise
     stopbands = np.array([
                 [45, 55],     # Remove 50 Hz interference
-                [0.1, 1]      # Remove DC wander and other factors like breathing (works really well!)
+                [0.1, 0.6]      # Remove DC wander and other factors like breathing (works really well!)
             ])
 
     # For the Kaiser Variables, use reasonable values
@@ -416,9 +423,9 @@ def main():
     # Simulate Adaptive FIR filtering by passing datapoints one by one and storing them in lms_filter_output
     for i in range(len(ecg)):
         # Introduce a perfect 50 Hz sine as the training noise
-        mains_noise = np.sin(2.0 * np.pi * 50 / Fs * i)
+        mains_noise = np.sin(2.0 * np.pi * 50 / Fs * i) + 0.2
 
-        lms_filter_output[i] = LMS_Filter.doFilterAdaptive(ecg[i], mains_noise, learningRate=0.001)
+        lms_filter_output[i] = LMS_Filter.doFilterAdaptive(ecg[i], mains_noise, learningRate=0.0005)
 
     plot_time_domain(lms_filter_output, time, plot_name + "_LMS_filtered_ECG_using - Time Domain")
 
