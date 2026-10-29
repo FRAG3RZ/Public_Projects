@@ -8,7 +8,7 @@ import os
 # Global Defines
 # ==============
 
-path_to_files = 'ECG_Data/'
+path_to_files = ''
 path_to_output = 'Output_Files/'
 
 # For us the ECG was set to 250 Hz 
@@ -31,7 +31,7 @@ def Load_ECG_Data(name_of_file):
     # ignore comments and data separators
     data = np.loadtxt(path_to_files + name_of_file, delimiter="\t", comments="#")
 
-    # Extract time and ECG (time is first column, actual data is 12th)
+    # Extract time and ECG (time is first column, Channel 2 data is 8th)
     # Both are one-dimensional arrays
     time = data[:, 0]
     ecg = data[:, 8]
@@ -149,44 +149,6 @@ def kaiser_window_function(h, beta, alpha):
 
     return h
 
-def detect_R_peaks(filter_output, Fs):
-    """
-    Returns an array of sample numbers corresponding to detected R peaks in the input array
-    """
-
-    # MAKE THIS CAUSAL -> USE SIMPLE MAX DETECTION AND THEN SLOW SAWTOOTH DECAY UNTIL THE MAX IS REACHED AGAIN\
-    # every time step decrease the decay max = max - 0.01*max
-
-
-    # Ignore peaks smaller than 25% of the maximum response
-    # An threshold adaptive to different ECG samples is more useful than a hard-set number, as different people may have differing ECG amplitudes
-    threshold = 0.25 * np.max(filter_output)
-
-    # Assume that a a human's peak heart rate is 220 bpm, not accoutning for age
-    min_sample_distance = int(60 / 220 * Fs)
-
-    peak_indices = []
-
-    # Start at 1 and stop before the last sample
-    for i in range(1, len(filter_output) - 1):
-
-        # === R detection! ===
-        # Logic follows:
-        #   Larger than threshold + larger than both neighbors, count as peak
-        if (filter_output[i] > threshold and
-            filter_output[i] > filter_output[i - 1] and
-            filter_output[i] >= filter_output[i + 1]):
-
-            # append the first one no matter what
-            if len(peak_indices) == 0:
-                peak_indices.append(i)
-
-            # Only append the peak if it's possible for another heart beat to occur, as per the 220 bpm limit
-            elif i - peak_indices[-1] >= min_sample_distance:
-                peak_indices.append(i)
-
-    return peak_indices
-
 # ===========================
 # === Plotting Functions ====
 # ===========================
@@ -207,7 +169,7 @@ def plot_time_domain(data_array, time_axis, name_of_plot, show_plot=True, y_labe
         plt.show()
     plt.close()
 
-def plot_frequency_domain(fft, frequency_axis, samplerate, name_of_plot, show_plot=True, normalize=True):
+def plot_frequency_domain(fft, frequency_axis, samplerate, name_of_plot, show_plot=True, normalize=True, y_label='Voltage (mV)'):
     """
     Plots the frequency domain of a signal using its array
     """
@@ -221,7 +183,7 @@ def plot_frequency_domain(fft, frequency_axis, samplerate, name_of_plot, show_pl
     
     # Plotting frequency domain
     plt.plot(frequency_axis, fft_voltage)
-    plt.ylabel('Voltage (mV))')
+    plt.ylabel(y_label)
     plt.title(f'{name_of_plot}')
     plt.xlabel('Frequency (Hz)')
 
@@ -286,7 +248,7 @@ def calculate_FIR_coefficients(bandstop_frequency_array, sampling_rate, remove_D
     # Plot the window to check
     frequency_axis = np.arange(middle) * sampling_rate / M # Create frequency axis in Hz (positive frequencies only -> up to "M/2")
     # Don't normalize this, as we want to see the 0 dB for full pass amplitude -> unlike real voltage signals which we normalize for graphing by 1 / N
-    plot_frequency_domain(final_frequency_window[0 : middle], frequency_axis, sampling_rate, "Desired_FIR_Frequency_Response", normalize=False) 
+    plot_frequency_domain(final_frequency_window[0 : middle], frequency_axis, sampling_rate, "Desired_FIR_Frequency_Response", normalize=False, y_label="Gain") 
 
     # Move the window from the frequency domain to the tap domain: X[K] -> x[n] & ensure it is real
     x = inverse_fft(final_frequency_window)
@@ -352,6 +314,37 @@ class FIRfilter:
             self.FIR_coefficients[i] += learningRate * error * self.data_buffer.get_item(i)
 
         return error
+
+def detect_R_peaks(filter_output_sample, min_sample_spacing, was_previous_max, samples_to_prev_detection, max, Fs):
+    """
+    Causal R peak detection
+    Takes in a sample and then compares with the heuristic and previous nmax to detect peaks
+    """
+
+    # Assume no detection by default
+    r_detected = 0
+
+    # Slowly decay the max value by 0.5% for each sample
+    # Expected level before next heartbeat is about 50% (about 136 samples for 110 BPM at 250 Hz Fs)
+    # High enough to miss noise, low enough so smaller Matched Filter detections still get detected
+    # Decays more slowly with a lower value
+    max = max - 0.005 * max
+
+    # If there is a new maximum value keep track
+    if filter_output_sample > max:
+        max = filter_output_sample
+        was_previous_max = True
+
+    # If the value keeps increasing, keep updating the max, but if it starts falling, detect the falling edge
+    if filter_output_sample < max and was_previous_max:
+        # Apply the heuristic
+        if( samples_to_prev_detection >= min_sample_spacing):
+            r_detected = 1 # New R detection
+
+        # Detect each falling edge only once
+        was_previous_max = False
+
+    return r_detected, max, was_previous_max
 
 
 def main():
@@ -455,79 +448,81 @@ def main():
 
     # ===== Step 4, filter the ORIGINAL ECG with the time-reversed template =====
 
+    # Prepare the Matched Filter instance as well as a bandstop filter instance to feed it filtered data
     Matched_FIR_Filter = FIRfilter(Matched_FIR_coefficients)
+    Input_Bandstop_Filter = FIRfilter(FIR_coefficients)
+
+    # Prepare all output arrays
     Matched_FIR_Filter_Output = np.zeros(len(ecg))
+    Input_Bandstop_Filter_Output = np.zeros(len(ecg))
+    detected_R_peaks = np.zeros(len(ecg))
+    momentary_heart_rate = np.zeros(len(ecg))
+
+    # Create static variables
+    local_maximum_nmax = 0
+    samples_to_prev_detection = 0
+    was_previous_max = False
+    R_detected_once = False
+
+    # Heuristic array -> only accept detections matching valid bpm
+    # As the R_peak detection is causal, we can't really ignore peaks which fall into a smaller bpm
+    # Once the bpm would be lower than 40 bpm, then no more values would ever be taken
+    # Therefore, APPLY ONLY MAXIMUM BPM HERE
+    Maximum_Heuristic_BPM = 150
+
+    # Convert BPM thresholds to an accepted min spacing:
+    min_sample_spacing = 1 / (Maximum_Heuristic_BPM / 60) * Fs
 
     for i in range(len(ecg)):
-        Matched_FIR_Filter_Output[i] = Matched_FIR_Filter.doFilter(ecg[i])
 
-    # ===== Step 5, square the output to improve SNR =====
-    Matched_FIR_Filter_Output **= 2
+        # Keep track of previous detections
+        samples_to_prev_detection += 1
 
-    # ===== Step 6, detect the R peaks and apply a heuristic to filter incorrect peaks ===== 
+        # First filter the original ECG using a normal bandpass
+        Input_Bandstop_Filter_Output[i] = Input_Bandstop_Filter.doFilter(ecg[i])
 
-    # Use the custom function to output an array of indexes
-    peaks_sample_indexes = detect_R_peaks(Matched_FIR_Filter_Output, Fs)
-    
-    # There is a slight offset between matched filter output and the detected peak time,
-    # Because the R peak lies at an index inside the template, NOT at the end sample
-    # So we need to find the R-peak position within the template to align the time correctly
+        # Use the filtered ECG output as the input to the Matched filter
+        Matched_FIR_Filter_Output[i] = Matched_FIR_Filter.doFilter(Input_Bandstop_Filter_Output[i])
 
-    # argmax returns the index of the largest value, NOT the value itself 
-    template_R_index = np.argmax(template)
+        # ===== Step 5, square the output to improve SNR =====
+        # ===== Step 6, detect the R peaks and apply a heuristic to filter incorrect peaks ===== 
+        detected_R_peaks[i], local_maximum_nmax, was_previous_max = detect_R_peaks(Matched_FIR_Filter_Output[i] ** 2, min_sample_spacing, was_previous_max, samples_to_prev_detection, local_maximum_nmax, Fs)
 
-    # Calculate the offset introduced by the matched filter
-    peak_offset = len(template) - 1 - template_R_index
+        # If new peak is detected, update heart rate
+        if(detected_R_peaks[i]):
+            # Only update the BPM once two R_peak readings are done
+            if R_detected_once:
+                momentary_heart_rate[i] =  60 * Fs / samples_to_prev_detection
+            R_detected_once = True
+            samples_to_prev_detection = 0
+        else:
+            if i > 0:
+                momentary_heart_rate[i] = momentary_heart_rate[i-1]
 
-    # Correct the detected indices by the offset in the template
-    corrected_peak_indexes = []
-    for index in peaks_sample_indexes:
-
-        # Correct every peak index by the template offset
-        corrected_index = index - peak_offset
-        if 0 <= corrected_index < len(ecg):
-            corrected_peak_indexes.append(corrected_index)
-
-    heart_rates = []
-    heart_rate_times = []
-
-    # Calculate the time interval between consecutive detected R-peaks
-    for i in range(1, len(corrected_peak_indexes)):
-
-        # Get the current and previous R-peak timestamps
-        # Calculated Heart Rate correlates with the second peak of the inverval
-        current_time = time[corrected_peak_indexes[i]]
-        previous_time = time[corrected_peak_indexes[i - 1]]
-
-        # Calculate time between the two R-peaks
-        R_peaks_inteval = current_time - previous_time
-
-        # Convert interval to BPM 
-        heart_rate = 60 / R_peaks_inteval
-
-        # Apply heuristic
-        # For a resting heart rate, we expect a BPM around 40-100. 
-        # Accounting for nervousness, we increase to 150 BPM
-        # IF TAKING MEASUREMENTS AFTER/DURING EXERCISE, CHANGE THE MAXIMUM TO A HIGHER NUMBER LIKE 200!
-        if 40 <= heart_rate <= 150:
-            heart_rates.append(heart_rate)
-            heart_rate_times.append(current_time)
 
     # Plot the Heart Rate vs. Time graph
-    plot_time_domain(heart_rates, heart_rate_times, plot_name + "_Momentary_Heart_Rate", y_label="Heart Rate (BPM)")
+    plot_time_domain(momentary_heart_rate, time, plot_name + "_Momentary_Heart_Rate", y_label="Heart Rate (BPM)")
 
     # ===== Step 7 - Plot the detected R-peaks against the ECG =====
 
     plt.figure()
 
     # Plot the original ECG
-    plt.plot(time, ecg, label="Original ECG")
+    plt.plot(time, Input_Bandstop_Filter_Output, label="Bandstop Filtered ECG")
 
+    # Accept only indexes where R is detected
+    peak_indexes = np.flatnonzero(detected_R_peaks) 
+
+    # Also need to offset the indexes by the R peak of the template itself (just find it's maximum value)
+    R_peak_of_template = np.argmax(template)
+    peak_offset = len(template) - 1 - R_peak_of_template
+    peak_indexes -= peak_offset
+    
     # Mark the detected R-peaks with red crosses
-    plt.plot(time[corrected_peak_indexes], ecg[corrected_peak_indexes],'rx', label="Detected R-peaks")
-    plt.title("ECG with Detected R-peaks")
+    plt.plot(time[peak_indexes], Input_Bandstop_Filter_Output[peak_indexes],'rx', label="Detected Falling Edge of R-peaks")
+    plt.title("Bandstop Filtered ECG with Detected R-peaks")
     plt.xlabel("Time (s)")
-    plt.ylabel("Amplitude")
+    plt.ylabel("Voltage (mV)")
     plt.legend()
     plt.grid()
 
