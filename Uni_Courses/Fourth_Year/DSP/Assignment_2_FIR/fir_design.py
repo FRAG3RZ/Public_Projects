@@ -1,5 +1,4 @@
 # Required imports
-
 from ecg_plot import *
 
 # ============ ASSIGNMENT PART TWO ====================
@@ -7,6 +6,9 @@ from ecg_plot import *
 def kaiser_variable_helper(A, deltaOmega):
     """
     Calculates the required variables for the Kaiser Window using the formulas in the lectures
+
+    A - side lobe decay
+    deltaOmega - transition width
     """
 
     # Implement the empyrical piecewise operation for Beta
@@ -20,7 +22,7 @@ def kaiser_variable_helper(A, deltaOmega):
     # Cast to integer for later calculations, and add 1 because int() rounds down, and we want an M larger than the "minimum" recommended
     M = int((A - 8) / (2.285 * deltaOmega)) + 1 
 
-    # Ensure the FIR filter has an odd number of taps, so the middle index lays at an integer, and NOT a half
+    # Ensure the FIR filter has an odd number of taps, so the middle index lays at an integer, and NOT a half -> makes other processing simpler
     if M % 2 == 0:
         M += 1
 

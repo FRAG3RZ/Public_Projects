@@ -54,8 +54,7 @@ def main():
     print("Sampling Frequency", Fs)
     print("Duration:", time[-1], "seconds")
 
-    template_file_name = "ecg_2.tsv" # Template used for Matching in Step 5
-    template_name = template_file_name[:-4] # Remove the .tsv for plot naming
+    template_file_name = "ecg_2.tsv" # Template used for Matching in Step 5 -> Daniel's ECG
     template_time, template_ecg, template_Fs = Load_ECG_Data(template_file_name)
 
     # =============== FIR COEFFICIENT CREATION ================
@@ -116,11 +115,11 @@ def main():
     Maximum_Heuristic_BPM = 150
 
     # Convert BPM thresholds to an accepted min spacing:
-    min_sample_spacing = 1 / (Maximum_Heuristic_BPM / 60) * Fs
+    min_sample_spacing = (60 / Maximum_Heuristic_BPM) * Fs
 
     for i in range(len(ecg)):
 
-        # Keep track of previous detections
+        # Keep track of sample number to the previous detection
         samples_to_prev_detection += 1
 
         # First filter the original ECG using a normal bandpass
@@ -133,13 +132,14 @@ def main():
         # ===== Step 6, detect the R peaks and apply a heuristic to filter incorrect peaks ===== 
         detected_R_peaks[i], local_maximum_nmax, was_previous_max = detect_R_peaks(Matched_FIR_Filter_Output[i] ** 2, min_sample_spacing, was_previous_max, samples_to_prev_detection, local_maximum_nmax, Fs)
 
-        # If new peak is detected, update heart rate
+        # If new peak is detected, array value is '1', update heart rate
         if(detected_R_peaks[i]):
             # Only update the BPM once two R_peak readings are done
             if R_detected_once:
                 momentary_heart_rate[i] =  60 * Fs / samples_to_prev_detection
             R_detected_once = True
-            samples_to_prev_detection = 0
+
+            samples_to_prev_detection = 0 # reset counter
         else:
             if i > 0:
                 momentary_heart_rate[i] = momentary_heart_rate[i-1]
@@ -159,6 +159,7 @@ def main():
     peak_indexes = np.flatnonzero(detected_R_peaks) 
 
     # Also need to offset the indexes by the R peak of the template itself (just find it's maximum value)
+    # The peak occurs at sample 82 of the template -> noticable offset!
     R_peak_of_template = np.argmax(template)
     peak_offset = len(template) - 1 - R_peak_of_template
     peak_indexes -= peak_offset

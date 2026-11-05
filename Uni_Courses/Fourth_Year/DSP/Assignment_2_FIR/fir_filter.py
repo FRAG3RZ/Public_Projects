@@ -82,4 +82,5 @@ class FIRfilter:
             # implement deltaH = mu * error * x(n - M)
             self.FIR_coefficients[i] += learningRate * error * self.data_buffer.get_item(i)
 
+        # filter output is the error variable
         return error

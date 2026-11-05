@@ -135,7 +135,7 @@ def main():
     print("\n===============\n")
     print("Running: ECG_Plot\n")
 
-    file_name = "ecg_1.tsv" # Used for Steps 1 - 4
+    file_name = "ecg_1.tsv" # Haider's ECG
 
     plot_name = file_name[:-4] # Remove the .tsv for plot naming
 
