@@ -137,7 +137,8 @@ def main():
 
     # ======= STEP 2: Create Master IIR Filter to Hold the SOS chain =======
     
-    Direct_Form_I_Filter = IIRFilter(filters=[])  
+    Direct_Form_I_Integer_Filter = IIRFilter(filters=[])  
+    Direct_Form_I_Float_Filter = IIRFilter(filters=[])
     Direct_Form_II_Filter = IIRFilter(filters=[])
 
     # ======= STEP 3: Fill the Main Filters with Individual Filter Instances =======
@@ -149,14 +150,25 @@ def main():
         Q_bits = 14  # No scaling for floating-point implementation  # Calculate the scaling factor
 
         # The coefficients can fit into a "short" (16-bit) integer
-        #b_scaled = np.round(b * 2**Q_bits).astype(np.int16)
-        #a_scaled = np.round(a * 2**Q_bits).astype(np.int16)
+        b_scaled = np.round(b * 2**Q_bits).astype(np.int16)
+        a_scaled = np.round(a * 2**Q_bits).astype(np.int16)
 
         # Create an instance of the DirectFormI filter
-        df1_filter = DirectFormI(b, a, Q_bits)
+        df1_filter = DirectFormI(b_scaled, a_scaled, Q_bits)
 
         # Add the filter instance to the master IIR filter
-        Direct_Form_I_Filter.filters.append(df1_filter)
+        Direct_Form_I_Integer_Filter.filters.append(df1_filter)
+
+    # 2.2 Direct Form I Filter in Python (Floating-Point)
+    for second_order_filter in sos:
+        b = second_order_filter[:3]  # FIR coefficients are the first three
+        a = second_order_filter[3:]  # IIR coefficients are the last three
+
+        # Create an instance of the DirectFormI filter
+        df1_filter = DirectFormI(b, a)
+
+        # Add the filter instance to the master IIR filter
+        Direct_Form_I_Float_Filter.filters.append(df1_filter)
 
     # 2.2 Direct Form II Filter in Python
     for second_order_filter in sos:
@@ -200,7 +212,7 @@ def main():
 
     # Simulate FIR filtering by passing datapoints one by one and store them in filter_output
     for i in range(len(ecg)):
-        ECG_Filtered_output[i] = ( Direct_Form_I_Filter.dofilter(ecg_fixed_point[i]) / (2**Q_bits)  ) # Don't forget to scale back down 
+        ECG_Filtered_output[i] = ( Direct_Form_I_Integer_Filter.dofilter(ecg_fixed_point[i]) / (2**Q_bits)  ) # Don't forget to scale back down 
     end_time = time.time()  # End the timer for performance measurement
 
     # Calculate the elapsed time for filtering
@@ -234,15 +246,25 @@ def main():
     # =======================================================================
 
     print("\n===============\n")
-    print("Benchmarking Direct Form I Filter...")
+    print("Benchmarking Direct Form I Fixed-Point Filter...")
 
-    benchmark_results_I = (Direct_Form_I_Filter, ecg_fixed_point, Q_bits, 1000)
+    benchmark_results_I = (Direct_Form_I_Integer_Filter, ecg_fixed_point, Q_bits, 1000)
 
     elapsed_I = benchmark(*benchmark_results_I)
 
     print(f"\nMedian execution time for Direct Form I Filter: {elapsed_I:.6f} seconds")
     print(f"The per-sample execution time is: {elapsed_I * 1_000_000 / len(ecg_fixed_point):.6f} microseconds")
 
+    print("\n===============\n")
+    print("Benchmarking Direct Form I Floating-Point Filter...")
+
+    benchmark_results_I = (Direct_Form_I_Float_Filter, ecg, None, 1000)
+
+    elapsed_I_float = benchmark(*benchmark_results_I)
+
+    print(f"\nMedian execution time for Direct Form I Filter: {elapsed_I_float:.6f} seconds")
+    print(f"The per-sample execution time is: {elapsed_I_float * 1_000_000 / len(ecg):.6f} microseconds")
+    
 
     print("\n===============\n")
     print("Benchmarking Direct Form II Filter...")
