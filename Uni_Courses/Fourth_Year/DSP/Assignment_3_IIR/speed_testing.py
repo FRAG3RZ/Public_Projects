@@ -7,11 +7,14 @@ import time
 import os
 import statistics
 
+# This will be used to run a "watchdog" in a separate thread
+import threading
 
+# Our own filters
 from IIR_filter import DirectFormI, DirectFormII, IIRFilter
 
-Fs = 1000  # Sampling frequency of the Arduino
-max_iteration_time = 1 / Fs  # Maximum allowed time per iteration
+Arduiono_Fs = 1000  # Sampling frequency of the Arduino
+max_iteration_time = 1 / Arduiono_Fs  # Maximum allowed time per iteration
 
 # Make sure the proper output path is used
 path_to_files = ""
