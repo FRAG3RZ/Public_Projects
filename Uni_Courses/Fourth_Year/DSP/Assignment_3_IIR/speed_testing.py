@@ -1,3 +1,5 @@
+import sys
+import platform
 import numpy as np
 import scipy.signal as signal
 import matplotlib.pyplot as plt
@@ -112,6 +114,12 @@ def benchmark(filter_instance, ecg, Signal_bits = None, repetitions=100):
 
 def main():
 
+    # Check the stuff
+    print("\nProcessor architecture:", platform.machine())
+    print("Python version:", sys.version)
+    print("Python executable:", sys.executable)
+    print("NumPy version:", np.__version__)
+
     global path_to_output
     os.makedirs(path_to_output, exist_ok=True)
 
@@ -141,11 +149,11 @@ def main():
         Q_bits = 14  # No scaling for floating-point implementation  # Calculate the scaling factor
 
         # The coefficients can fit into a "short" (16-bit) integer
-        b_scaled = np.round(b * 2**Q_bits).astype(np.int16)
-        a_scaled = np.round(a * 2**Q_bits).astype(np.int16)
+        #b_scaled = np.round(b * 2**Q_bits).astype(np.int16)
+        #a_scaled = np.round(a * 2**Q_bits).astype(np.int16)
 
         # Create an instance of the DirectFormI filter
-        df1_filter = DirectFormI(b_scaled, a_scaled, Q_bits)
+        df1_filter = DirectFormI(b, a, Q_bits)
 
         # Add the filter instance to the master IIR filter
         Direct_Form_I_Filter.filters.append(df1_filter)
@@ -227,15 +235,24 @@ def main():
 
     print("\n===============\n")
     print("Benchmarking Direct Form I Filter...")
+
     benchmark_results_I = (Direct_Form_I_Filter, ecg_fixed_point, Q_bits, 1000)
-    print(f"\nMedian execution time for Direct Form I Filter: {benchmark(*benchmark_results_I):.6f} seconds")
-    print(f"\nThe per-sample execution time is: {benchmark(*benchmark_results_I * 1000000) / len(ecg_fixed_point):.6f} microseconds\n")
+
+    elapsed_I = benchmark(*benchmark_results_I)
+
+    print(f"\nMedian execution time for Direct Form I Filter: {elapsed_I:.6f} seconds")
+    print(f"The per-sample execution time is: {elapsed_I * 1_000_000 / len(ecg_fixed_point):.6f} microseconds")
+
 
     print("\n===============\n")
     print("Benchmarking Direct Form II Filter...")
+
     benchmark_results_II = (Direct_Form_II_Filter, ecg, None, 1000)
-    print(f"\nMedian execution time for Direct Form II Filter: {benchmark(*benchmark_results_II):.6f} seconds\n")
-    print(f"\nThe per-sample execution time is: {benchmark(*benchmark_results_II * 1000000) / len(ecg):.6f} microseconds\n")
+
+    elapsed_II = benchmark(*benchmark_results_II)
+
+    print(f"\nMedian execution time for Direct Form II Filter: {elapsed_II:.6f} seconds")
+    print(f"The per-sample execution time is: {elapsed_II * 1_000_000 / len(ecg):.6f} microseconds\n")
     
 
 

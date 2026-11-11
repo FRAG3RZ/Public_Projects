@@ -38,8 +38,8 @@ class DirectFormI:
         # Coefficients -> 16-bit short integers
         # Convert all coefficients into Python integers instead of numpy fixed integers
         # We found this significantly improved the speed of the filter, as it avoids numpy overhead
-        self.b = [int(coefficient) for coefficient in b] 
-        self.a = [int(coefficient) for coefficient in a] 
+        self.b = [float(coefficient) for coefficient in b] 
+        self.a = [float(coefficient) for coefficient in a] 
         self.Q_scaling = Q_scaling
 
         # 4 Delay Buffers
@@ -54,7 +54,7 @@ class DirectFormI:
     def dofilter(self, x_n):
 
         # Make sure the input is an integer for fixed-point operation
-        x_n = int(x_n)
+        x_n = float(x_n)
 
         # First, write the accumulator equation:
         self.accumulator = (self.b[0] * x_n
@@ -66,7 +66,7 @@ class DirectFormI:
 
         # Apply the scaling factor to the accumulator
         # A right shift operation is equivalent to dividing by 2^Q_scaling
-        self.accumulator = self.accumulator >> self.Q_scaling
+        #self.accumulator = self.accumulator >> self.Q_scaling
 
         # Update delay buffers
         self.input_delay_2 = self.input_delay_1
