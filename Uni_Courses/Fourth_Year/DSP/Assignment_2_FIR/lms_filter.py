@@ -13,7 +13,7 @@ def main():
     print("\n===============\n")
     print("Running: Realtime LMS FIR Filter Simulation\n")
 
-    file_name = "ecg_1.tsv"
+    file_name = "ecg1.tsv"
 
     plot_name = file_name[:-4] # Remove the .tsv for plot naming
 

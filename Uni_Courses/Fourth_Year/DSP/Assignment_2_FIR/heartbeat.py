@@ -46,7 +46,7 @@ def main():
     print("\n===============\n")
     print("Running: Realtime Bandstop FIR Filter + Heart Beat Detection Simulation\n")
 
-    file_name = "ecg_1.tsv" # Used for Steps 1 - 4
+    file_name = "ecg1.tsv" # Used for Steps 1 - 4
     
     plot_name = file_name[:-4] # Remove the .tsv for plot naming
     time, ecg, Fs = Load_ECG_Data(file_name)
@@ -54,7 +54,7 @@ def main():
     print("Sampling Frequency", Fs)
     print("Duration:", time[-1], "seconds")
 
-    template_file_name = "ecg_2.tsv" # Template used for Matching in Step 5 -> Daniel's ECG
+    template_file_name = "ecg2.tsv" # Template used for Matching in Step 5 -> Daniel's ECG
     template_time, template_ecg, template_Fs = Load_ECG_Data(template_file_name)
 
     # =============== FIR COEFFICIENT CREATION ================

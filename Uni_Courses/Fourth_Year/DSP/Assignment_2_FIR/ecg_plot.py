@@ -115,7 +115,8 @@ def plot_frequency_domain(fft, frequency_axis, samplerate, name_of_plot, show_pl
     # plt.xscale('log') Optionally could log scale X-axis, but the x range isn't large for ECG data
 
     # Cutt off the mirror frequencies (above Fs / 2)
-    plt.xlim(0, samplerate / 2) # If using Log on the x-axis, Log can't start at 0 so use 1
+    # Use plot negative frequencies so the DC bin is visible
+    plt.xlim(-3, samplerate / 2) # If using Log on the x-axis, Log can't start at 0 so use 1
 
     plt.grid()
     plt.savefig(path_to_output + name_of_plot + '.svg') # Save as an SVG
@@ -135,7 +136,7 @@ def main():
     print("\n===============\n")
     print("Running: ECG_Plot\n")
 
-    file_name = "ecg_1.tsv" # Haider's ECG
+    file_name = "ecg1.tsv" # Haider's ECG
 
     plot_name = file_name[:-4] # Remove the .tsv for plot naming
 

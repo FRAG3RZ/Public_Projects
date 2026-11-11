@@ -14,7 +14,7 @@ def main():
     print("\n===============\n")
     print("Running: Realtime FIR Simulation\n")
 
-    file_name = "ecg_1.tsv"
+    file_name = "ecg1.tsv"
 
     plot_name = file_name[:-4] # Remove the .tsv for plot naming
 
@@ -29,7 +29,7 @@ def main():
     # Prepare the stopbands -> remove DC and remove mains noise
     stopbands = np.array([
                 [45, 55],     # Remove 50 Hz interference
-                [0.1, 0.6]    # Remove DC wander and other factors like breathing (works really well!) -> careful not to remove the T-part of the PQRST
+                [0, 0.6]    # Remove DC wander and other factors like breathing (works really well!) -> careful not to remove the T-part of the PQRST
             ])
 
     # For the Kaiser Variables, use reasonable values
