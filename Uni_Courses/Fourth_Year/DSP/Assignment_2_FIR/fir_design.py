@@ -1,5 +1,5 @@
 # Required imports
-from ecg_plot import *
+from .ecg_plot import *
 
 # ============ ASSIGNMENT PART TWO ====================
 

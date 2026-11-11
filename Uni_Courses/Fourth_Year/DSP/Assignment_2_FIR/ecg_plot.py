@@ -78,7 +78,7 @@ def inverse_fft(fft_data):
 # === Plotting Functions ====
 # ===========================
 
-def plot_time_domain(data_array, time_axis, name_of_plot, show_plot=True, y_label='Voltage (mV)'):
+def plot_time_domain(data_array, time_axis, name_of_plot, show_plot=True, y_label='Voltage (mV)', path_to_output=path_to_output):
     """ 
     Plots the time domain of a signal using its array
     """
@@ -94,7 +94,7 @@ def plot_time_domain(data_array, time_axis, name_of_plot, show_plot=True, y_labe
         plt.show()
     plt.close()
 
-def plot_frequency_domain(fft, frequency_axis, samplerate, name_of_plot, show_plot=True, normalize=True, y_label='Voltage (mV)'):
+def plot_frequency_domain(fft, frequency_axis, samplerate, name_of_plot, show_plot=True, normalize=True, y_label='Voltage (mV)', path_to_output=path_to_output):
     """
     Plots the frequency domain of a signal using its array
     """

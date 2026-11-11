@@ -1,4 +1,4 @@
-from ecg_plot import *
+from .ecg_plot import *
 
 # A CircularBuffer handler to speed up the coefficient buffer, and not have to shift the whole buffer each calculation
 class CircularBuffer:
