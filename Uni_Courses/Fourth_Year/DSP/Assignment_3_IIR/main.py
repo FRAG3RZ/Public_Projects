@@ -23,11 +23,13 @@ PORT =  pyfirmata2.Arduino.AUTODETECT
 board = pyfirmata2.Arduino(PORT)
 
 # Setup the Arduino Pins for the Ultrasonic
+"""
 trigger_pin = board.get_pin('d:9:o')
 echo_pin = board.get_pin('d:10:i')
 
 echo_pin.register_callback(myCallback)
 echo_pin.enable_reporting()
+"""
 
 # Interval in miliseconds
 board.samplingOn(sampling_interval * 1000)
