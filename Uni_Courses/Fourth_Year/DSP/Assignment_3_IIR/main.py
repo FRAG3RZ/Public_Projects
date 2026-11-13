@@ -27,7 +27,7 @@ board = pyfirmata2.Arduino(PORT)
 trigger_pin = board.get_pin('d:9:o')
 echo_pin = board.get_pin('d:10:i')
 
-echo_pin.register_callback(myCallback)
+echo_pin.register_callback(LDR_Data_Ready)
 echo_pin.enable_reporting()
 """
 
@@ -78,25 +78,34 @@ def main():
     )
     watchdog_thread.start()
 
+
+    # put this whole thing in a call back
+    # Everuything will be in the callback -> plotting, 
+
     while True:
+        
+        time.sleep(1)
 
-        # First sample the Arduino
-        arduino_raw_voltage = read_voltage_from_arduino() 
+        
 
-        # Filtered voltage from arduino
-        filtered_voltage = arduino_IIR_Filter.dofilter(arduino_raw_voltage)
+def LDR_Data_Ready(voltage):
+    # First sample the Arduino
+    arduino_raw_voltage = read_voltage_from_arduino() 
 
-        """
-        # =============== Game Control ================
-        # Map 10–50 cm onto screen width
-        fraction = max(0, min(1, (distance_cm - 10) / 40))
-        x = int(fraction * (pyautogui.size().width - 1))
+    # Filtered voltage from arduino
+    filtered_voltage = arduino_IIR_Filter.dofilter(arduino_raw_voltage)
 
-        pyautogui.moveTo(x, 700)
-        """
+    """
+    # =============== Game Control ================
+    # Map 10–50 cm onto screen width
+    fraction = max(0, min(1, (distance_cm - 10) / 40))
+    x = int(fraction * (pyautogui.size().width - 1))
 
-        # At the end of each iteration, "pet" the watchdog :D
-        watchdog.pet_the_watchdog()
+    pyautogui.moveTo(x, 700)
+    """
+
+    # At the end of each iteration, "pet" the watchdog :D
+    watchdog.pet_the_watchdog()
 
 
 

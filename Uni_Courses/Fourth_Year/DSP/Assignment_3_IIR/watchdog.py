@@ -1,6 +1,9 @@
 import time
 import threading
 
+# Change to callback calling the watchdog
+# Once thousand callbacks have been called, check if it has been once second
+
 class Watchdog:
     def __init__(self, watchdog_maximum_time_s):
 

@@ -3,6 +3,8 @@ import numpy as np
 # This is so we can call C functions
 import ctypes
 
+# GET RID OF LISTS FOR THE COEFFIENTS, HAVE SIMPLY A1, A2 MEMBERS
+
 # ========= MASTER IIR CLASS ==============
 
 # This is the master IIR class implementing the SOS chain internally
