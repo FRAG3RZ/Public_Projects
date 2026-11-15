@@ -15,29 +15,17 @@ import pyautogui
 
 from IIR_filter import DirectFormII, IIRFilter
 
+# ====================== IMPORTANT DEFINES =======================
+
 arduino_Fs = 1000  # Sampling frequency of the Arduino
-sampling_interval = 1 / arduino_Fs  # Maximum allowed time per iteration
+sampling_interval = 1 / arduino_Fs
+
+arduino_IIR_Filter = IIRFilter(filters=[])
 
 # Create an instance of the Arduino
 PORT =  pyfirmata2.Arduino.AUTODETECT
 board = pyfirmata2.Arduino(PORT)
 
-# Setup the Arduino Pins for the Ultrasonic
-"""
-trigger_pin = board.get_pin('d:9:o')
-echo_pin = board.get_pin('d:10:i')
-
-echo_pin.register_callback(LDR_Data_Ready)
-echo_pin.enable_reporting()
-"""
-
-# Interval in miliseconds
-board.samplingOn(sampling_interval * 1000)
-
-def read_voltage_from_arduino():
-
-    voltage = 0
-    return voltage
 
 def main():
 
@@ -49,7 +37,7 @@ def main():
 
     # ======= STEP 2: Create Master IIR Filter to Hold the SOS chain =======
     
-    arduino_IIR_Filter = IIRFilter(filters=[])  # Create an instance of the master IIR filter
+    global arduino_IIR_Filter  # Already use the global instance
 
     # ======= STEP 3: Fill the Main Filters with Individual 2nd order Filter Instances =======
 
@@ -67,9 +55,15 @@ def main():
 
     # ======= STEP 4: Sample the Arduino Signal and Apply the Filter =======
 
-    # ============= Setup the Watchdog ================   
+    # Setup the Arduino Pins
+    analog_in_0 = board.get_pin('a:0:i')
+    analog_in_0.register_callback(Arduino_Data_Ready)
+    
 
-    watchdog = Watchdog(watchdog_maximum_time_s=max_sec_per_iteration)
+    # ======= Start the Watchdog =======
+
+    global watchdog
+    watchdog = Watchdog(samples_per_second=arduino_Fs, time_individual_callback=False)
 
     # Start watchdog monitoring on a separate thread -> makes sure watchdog is fully separate from main
     watchdog_thread = threading.Thread(
@@ -78,22 +72,40 @@ def main():
     )
     watchdog_thread.start()
 
+    # Interval in miliseconds
+    analog_in_0.enable_reporting()
+    board.samplingOn(sampling_interval * 1000)
 
-    # put this whole thing in a call back
-    # Everuything will be in the callback -> plotting, 
 
-    while True:
+    # Make the main run only if the watchdog allows it
+    # If watchdog flags an error, exit the program
+    try:
+        while True:
+            if watchdog.expired.is_set():
+                raise TimeoutError("Watchdog expired!")
+
+            time.sleep(0.01)
+
+    finally:
+        board.exit()
+
         
-        time.sleep(1)
+def Arduino_Data_Ready(voltage):
 
-        
+    # Pet the watchdog
+    watchdog.pet_watchdog_on_callback_start()
 
-def LDR_Data_Ready(voltage):
     # First sample the Arduino
-    arduino_raw_voltage = read_voltage_from_arduino() 
+    arduino_raw_voltage = voltage
 
     # Filtered voltage from arduino
     filtered_voltage = arduino_IIR_Filter.dofilter(arduino_raw_voltage)
+
+
+    # ==== Update the real-time plotting ====
+
+
+    # ====== Control the game ======
 
     """
     # =============== Game Control ================
@@ -104,8 +116,8 @@ def LDR_Data_Ready(voltage):
     pyautogui.moveTo(x, 700)
     """
 
-    # At the end of each iteration, "pet" the watchdog :D
-    watchdog.pet_the_watchdog()
+    # End of Callback
+    watchdog.end_of_callback()
 
 
 

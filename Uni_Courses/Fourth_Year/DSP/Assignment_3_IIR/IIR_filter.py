@@ -42,12 +42,36 @@ class DirectFormI:
         # We found this significantly improved the speed of the filter, as it avoids numpy overhead
 
         # If Q_scaling is provided, we will convert the coefficients to integers for fixed-point operation
-        if Q_scaling != None:
-            self.b = [int(coefficient) for coefficient in b] 
-            self.a = [int(coefficient) for coefficient in a] 
+        if Q_scaling is not None:
+            # Fixed-point
+            self.a_1 = int(a[1])
+            self.a_2 = int(a[2])
+
+            self.b_0 = int(b[0])
+            self.b_1 = int(b[1])
+            self.b_2 = int(b[2])
+
         else:
-            self.b = [float(coefficient) for coefficient in b] 
-            self.a = [float(coefficient) for coefficient in a]
+            # Floating-point
+            self.a_1 = float(a[1])
+            self.a_2 = float(a[2])
+
+            self.b_0 = float(b[0])
+            self.b_1 = float(b[1])
+            self.b_2 = float(b[2])
+
+        # Don't use lists for the coefficient to increase speed
+        # Lists increase the computational time with extra memmory operations when retrieving the data
+        # Use individual variables to increase speed
+        # Also our implementation doesn't need a_0 as we assume it's 1
+        self.a_1 = a[1]
+        self.a_2 = a[2]
+
+        self.b_0 = b[0]
+        self.b_1 = b[1]
+        self.b_2 = b[2]
+
+        # Assign scaling
         self.Q_scaling = Q_scaling
 
         # 4 Delay Buffers
@@ -68,11 +92,11 @@ class DirectFormI:
             x_n = float(x_n)
 
         # First, write the accumulator equation:
-        self.accumulator = (self.b[0] * x_n
-            + self.b[1] * self.input_delay_1
-            + self.b[2] * self.input_delay_2
-            - self.a[1] * self.output_delay_1
-            - self.a[2] * self.output_delay_2
+        self.accumulator = (self.b_0 * x_n
+            + self.b_1 * self.input_delay_1
+            + self.b_2 * self.input_delay_2
+            - self.a_1 * self.output_delay_1
+            - self.a_2 * self.output_delay_2
         )
 
         # Apply the scaling factor to the accumulator
@@ -97,8 +121,24 @@ class DirectFormII:
     def __init__(self, b, a):
         # Coefficients
         # Convert to Python-native float to avoid numpy overhead and improve speed
-        self.b = [float(coefficient) for coefficient in b]
-        self.a = [float(coefficient) for coefficient in a]
+        # Floating-point
+        self.a_1 = float(a[1])
+        self.a_2 = float(a[2])
+
+        self.b_0 = float(b[0])
+        self.b_1 = float(b[1])
+        self.b_2 = float(b[2])
+
+        # Don't use lists for the coefficient to increase speed
+        # Lists increase the computational time with extra memmory operations when retrieving the data
+        # Use individual variables to increase speed
+        # Also our implementation doesn't need a_0 as we assume it's 1
+        self.a_1 = a[1]
+        self.a_2 = a[2]
+
+        self.b_0 = b[0]
+        self.b_1 = b[1]
+        self.b_2 = b[2]
 
         # 2 Delay Buffers
         self.delay_1 = 0
@@ -116,13 +156,13 @@ class DirectFormII:
 
         # First, input accumulator equation:
         self.input_accumulator = ( x_n 
-        - self.a[1] * self.delay_1 
-        - self.a[2] * self.delay_2 )
+        - self.a_1 * self.delay_1 
+        - self.a_2 * self.delay_2 )
 
         # Then, the output accumulator equation:
-        self.output_accumulator = ( self.b[0] * self.input_accumulator 
-        + self.b[1] * self.delay_1  
-        + self.b[2] * self.delay_2 )
+        self.output_accumulator = ( self.b_0 * self.input_accumulator 
+        + self.b_1 * self.delay_1  
+        + self.b_2 * self.delay_2 )
 
         # Update delay buffers
         self.delay_2 = self.delay_1

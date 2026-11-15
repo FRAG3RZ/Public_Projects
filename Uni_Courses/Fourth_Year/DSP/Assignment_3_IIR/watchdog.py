@@ -1,48 +1,85 @@
 import time
 import threading
 
-# Change to callback calling the watchdog
-# Once thousand callbacks have been called, check if it has been once second
-
 class Watchdog:
-    def __init__(self, watchdog_maximum_time_s):
+    def __init__(self, samples_per_second, time_individual_callback = False):
 
-        # Convert milliseconds into seconds
-        self.watchdog_maximum_time_s = watchdog_maximum_time_s
+        # Keep track of sampling rate and time
+        self.callback_maximum_time_s = 1 / samples_per_second
+        self.samples_per_second =samples_per_second
+
+        # Decide whether counting the length of individual callbacks will be used by the watchdog
+        self.time_individual_callback = time_individual_callback
 
         # Record when the watchdog was last petted -> initialize to current time
         self.last_pet_time = time.perf_counter()
 
+        # Keep track of callback number and time between callbacks
+        # This is the main priority of the watchdog
+        self.num_of_callbacks = 0
+        self.time_at_0_callbacks = self.last_pet_time
+
         # Shared signal between threads used to signal that the watchdog has expired
         self.expired = threading.Event()
 
-    def pet_the_watchdog(self):
+    def pet_watchdog_on_callback_start(self):
 
         # Watchdog has expired, just return
         if self.expired.is_set():
             return
 
-        # Update the last time the watchdog was petted
+        # Increment total callback number
+        self.num_of_callbacks += 1
+
+        # Update the callback start time
         self.last_pet_time = time.perf_counter()
 
     def monitor_watchdog(self):
 
-        # Continue checking until the watchdog expires
         while not self.expired.is_set():
 
-            # Calculate time since the last pet
-            elapsed_time = time.perf_counter() - self.last_pet_time
+            elapsed_time = time.perf_counter() - self.time_at_0_callbacks
 
-            # Check whether the maximum allowed time has passed
-            if elapsed_time >= self.watchdog_maximum_time_s:
+            if elapsed_time >= 1.0:
+
+                # Account for slight innacuracies in calling the monitor
+                measured_Fs = self.num_of_callbacks / elapsed_time
+
+                if measured_Fs < self.samples_per_second * 0.95:
+                    #Set the expired Thread Event flag -> signal to main that Watchdog has expired
+                    self.expired.set()
+    
+                    print("\n=============================================")
+                    print("Received too little callbacks per second ")
+                    print("    Check connection or lower Fs")
+                    print("=============================================\n")
+                    return
+
+                self.num_of_callbacks = 0
+                self.time_at_0_callbacks = time.perf_counter()
+
+            time.sleep(0.01)
+
+    def end_of_callback(self):
+
+        # Only flag the time of individual callbacks if wanted
+        if self.time_individual_callback:
+            # Continue checking until the watchdog expires
+            if self.expired.is_set():
+                return
+
+            # Calculate time since the last pet
+            callback_elapsed_time = time.perf_counter() - self.last_pet_time
+
+            # Check whether the callback took too long
+            if callback_elapsed_time >= self.callback_maximum_time_s:
 
                 #Set the expired Thread Event flag -> signal to main that Watchdog has expired
                 self.expired.set()
 
                 print("\n=============================================")
-                print("Watchdog timeout - Lowering of Fs recommended!")
-                print("=============================================n")
+                print("Callback took too long - Lowering of Fs recommended!")
+                print("=============================================\n")
                 return
 
-            # Avoid continuously consuming CPU, check twice per maximum sampling interval
-            time.sleep(self.watchdog_maximum_time_s / 2)
+                
