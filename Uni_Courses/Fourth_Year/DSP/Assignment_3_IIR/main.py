@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.signal as signal
 import matplotlib.pyplot as plt
+from matplotlib.widgets import Button
 import time
 import os
 
@@ -20,15 +21,48 @@ from IIR_filter import DirectFormII, IIRFilter
 # Reuse our CircularBuffer class from Assignment 2 to use as the buffer for incomming data
 from CircularBuffer import CircularBuffer
 
+# ====================== Arduino Setup =======================
 
-# ====================== IMPORTANT DEFINES =======================
-
-arduino_Fs = 1000  # Sampling frequency of the Arduino
+arduino_Fs = 250  # Sampling frequency of the Arduino
 sampling_interval = 1 / arduino_Fs
 
 # Create an instance of the Arduino
 PORT =  pyfirmata2.Arduino.AUTODETECT
 board = pyfirmata2.Arduino(PORT)
+
+# ====================== IMPORTANT DEFINES =======================
+
+knock_patterns = {
+    "Basic ass knock": [0.43, 0.33, 0.15, 0.43],
+    "CALL NINTENDO! MARIO IS": [0.15, 0.30, 0.30, 0.15, 0.30, 0.60],
+
+    "GAME OF THRONES": [0.333, 0.333, 0.167, 0.167, 0.333],
+
+    "TETRIS END": [0.15, 0.15, 0.30, 0.30, 0.30, 0.30]
+
+    #"RUN! DARTH": [0.5, 0.5, 0.35, 0.15, 0.5, 0.35, 0.15],
+
+    #"YOU'RE A LIZARD HARRY": [0.45, 0.20, 0.4, 0.6, 0.8],
+
+}
+
+# Allow the high-pass filter to settle before detecting knocks
+filter_settling_time = 6.0
+sampling_start_time = None
+
+knock_max = 0.0
+was_previous_max = False
+samples_to_prev_detection = 1000
+
+# Minimum separation between two detected knocks
+# 50 ms at 400 Hz = 20 samples
+min_sample_spacing = int(arduino_Fs * 0.05)
+
+# Minimum peak amplitude required to recognise a knock
+minimum_knock_voltage = 30  # mV
+
+# Filter to store the recent detected knocks -> store last 20 time stamped knocks
+knock_timestamps_buffer = CircularBuffer(20)
 
 # ========================= DATA STORAGE =============================
 
@@ -52,6 +86,7 @@ raw_data = {axis: CircularBuffer(recent_sample_count) for axis in axes_names}
 filtered_data = {axis: CircularBuffer(recent_sample_count) for axis in axes_names}
 time_data = {axis: CircularBuffer(recent_sample_count) for axis in axes_names}
 
+
 # Prevent plotting and Arduino callbacks from accessing buffers simultaneously
 # When data is being updated, don't use it for plotting!
 # When plotting the data, don't update it!
@@ -59,6 +94,9 @@ time_data = {axis: CircularBuffer(recent_sample_count) for axis in axes_names}
 data_lock = threading.Lock()
 
 # =================== PLOTTING PREPARATION ===================
+
+# Flag to pause and resume plotting without stopping data acquisition
+plot_paused = False
 
 # Create one window with 3 rows and 2 columns of graphs
 # Left column: raw X, Y, Z
@@ -83,8 +121,8 @@ for i, axis in enumerate(axes_names):
     axes[i, 1].set_title(f"{axis.upper()} - Filtered")
 
     # Y-axis is voltage -> callback scales the normalized ADC output into voltage using VREF = 5.0V
-    axes[i, 0].set_ylabel("Voltage (V)")
-    axes[i, 1].set_ylabel("Voltage (V)")
+    axes[i, 0].set_ylabel("Voltage (mV)")
+    axes[i, 1].set_ylabel("Voltage (mV)")
 
     # X axis will be converted to time in update_plots instead of samples
     axes[i, 0].set_xlabel("Time (s)")
@@ -94,7 +132,30 @@ for i, axis in enumerate(axes_names):
     axes[i, 0].grid()
     axes[i, 1].grid()
 
-plt.tight_layout()
+# ===== ADD A PAUSE BUTTON ====
+
+# Leave space for the pause button
+plt.subplots_adjust(bottom=0.12)
+
+# Create the pause/resume button
+button_axes = fig.add_axes([0.42, 0.02, 0.16, 0.05])
+pause_button = Button(button_axes, "Pause")
+
+# Toggle plotting whenever the button is clicked
+def toggle_pause(event):
+
+    global plot_paused
+
+    plot_paused = not plot_paused
+
+    if plot_paused:
+        pause_button.label.set_text("Resume")
+    else:
+        pause_button.label.set_text("Pause")
+
+    fig.canvas.draw_idle()
+
+pause_button.on_clicked(toggle_pause)
 
 # Create a function which we can continuously call to update the graphs
 def update_plots():
@@ -183,7 +244,7 @@ def main():
     # ======= Start the Watchdog =======
     
     global watchdog
-    watchdog = Watchdog(samples_per_second=arduino_Fs * 3, # Multiplied by three because we're expecting three callbacks from X, Y and Z 
+    watchdog = Watchdog(samples_per_second= arduino_Fs * 3, # Multiplied by three because we're expecting three callbacks from X, Y and Z 
                         time_individual_callback=False)
 
     # Start watchdog monitoring on a separate thread -> makes sure watchdog is fully separate from main
@@ -192,6 +253,17 @@ def main():
         daemon=True # Set this to be a background process, aka a Daemon
     )
     watchdog_thread.start()
+
+    # ====== Start the pattern recogniztion thread ======:
+
+    pattern_thread = threading.Thread(
+        target=monitor_knock_patterns,
+        args=(knock_timestamps_buffer,), # only needs the timestamped buffer 
+        daemon=True # Once again background process so don't exit the program
+    )
+    pattern_thread.start()
+
+    # ====== Start the callbacks for all the pins ======
 
     # Register the callbacks -> Need three ways to call our one universal ccallback
     # Need to use .items() for Python to return BOTH the keys and the associated values
@@ -205,6 +277,10 @@ def main():
         pin.enable_reporting()
 
     # Interval in miliseconds
+    # Record when acquisition begins -> wait the first x seconds for the filter to settle
+    global sampling_start_time
+    sampling_start_time = time.perf_counter()
+
     board.samplingOn(sampling_interval * 1000)
 
     # Enables interactive plotting
@@ -222,17 +298,106 @@ def main():
             if watchdog.expired.is_set():
                 raise TimeoutError("Watchdog expired!")
 
-            # Update the six graphs with the latest Arduino samples
-            update_plots()
+            # Only update the graphs when plotting is not paused
+            if not plot_paused:
+                update_plots()
 
-            # Allow Matplotlib to redraw and process window events
+            # Keep processing GUI events so the pause button remains responsive
             plt.pause(0.05)
 
     finally:
         # Close the Arduino connection when the program finishes
         board.exit()
 
-        
+
+# ====================== KNOCK DETECTION ======================
+
+def detect_knock(
+    filter_output_sample,
+    min_sample_spacing,
+    was_previous_max,
+    samples_to_prev_detection,
+    previous_max_value,
+    minimum_knock_voltage=40
+):
+    """
+    Detect knocks using an adaptive maximum and falling-edge detection.
+    """
+
+    knock_detected = 0
+
+    # Use absolute amplitude to detect positive and negative vibrations
+    sample = abs(filter_output_sample)
+
+    # Gradually decay the previous maximum
+    max_value = previous_max_value * 0.98
+
+    # Update the maximum when a larger amplitude is received
+    if sample > max_value:
+
+        max_value = sample
+        was_previous_max = True
+
+    # Detect the falling edge after a local maximum
+    elif sample < max_value and was_previous_max:
+
+        # Only detect if sufficient time has passed since the last knock
+        # and the maximum amplitude exceeds the minimum threshold
+        if (
+            samples_to_prev_detection >= min_sample_spacing
+            and max_value >= minimum_knock_voltage
+        ):
+            knock_detected = 1
+
+        # Prevent the same maximum from being detected twice
+        was_previous_max = False
+
+    return knock_detected, max_value, was_previous_max
+
+# ====================== KNOCK PATTERN MONITORING DAEMON ======================
+
+def monitor_knock_patterns(knock_buffer, tolerance_milliseconds=120):
+
+    # Remember the last timestamp that triggered each pattern
+    last_detected = {}
+
+    # Keep monitoring until the watchdog expires
+    while not watchdog.expired.is_set():
+
+        # Safely retrieve the latest knock timestamps
+        with data_lock:
+            timestamps = list(knock_buffer.get_samples())
+
+        # Compare recent knocks against each person's pattern
+        for person, pattern in knock_patterns.items():
+
+            # Number of knocks required for this pattern
+            n = len(pattern) + 1
+
+            if len(timestamps) < n:
+                continue
+
+            # Get the most recent knocks
+            recent_knocks = timestamps[-n:]
+
+            # Skip if this exact sequence already triggered this pattern
+            if last_detected.get(person) == tuple(recent_knocks):
+                continue
+
+            # Calculate intervals between consecutive knocks
+            intervals = np.diff(recent_knocks)
+
+            # Compare intervals with the expected pattern
+            if np.all(np.abs(intervals - pattern) <= tolerance_milliseconds / 1000):
+
+                print(f"{person} detected!")
+
+                # Remember this sequence to prevent duplicate recognition
+                last_detected[person] = tuple(recent_knocks)
+
+        # Wait 10 ms before checking again
+        time.sleep(0.01)
+
 def Arduino_Data_Ready(voltage, axis):
 
     # Start the callback watchdog 
@@ -240,7 +405,8 @@ def Arduino_Data_Ready(voltage, axis):
 
     # Read and store the raw voltage
     # Arduino returns a normalized ADC reading between 0 - 1, need to scale to VREF = 5V
-    arduino_raw_voltage = voltage * 5.0 
+    # The voltage is now miliVolts
+    arduino_raw_voltage = voltage * 5000.0 
 
     # Calculate and store the right voltage as per X, Y or Z
     filtered_voltage = arduino_IIR_Filters[axis].dofilter(arduino_raw_voltage)
@@ -255,23 +421,42 @@ def Arduino_Data_Ready(voltage, axis):
         filtered_data[axis].append(filtered_voltage)
         time_data[axis].append(time.perf_counter())
 
-    # Apply the matched filter here: 
+    # ==== Apply the knock detection ====
 
-    # ====== Control the game ======
+    global knock_max, was_previous_max, samples_to_prev_detection
 
-    """
-    # =============== Game Control ================
-    # Map 10–50 cm onto screen width
-    fraction = max(0, min(1, (distance_cm - 10) / 40))
-    x = int(fraction * (pyautogui.size().width - 1))
+    # Ignore knock detection during the first x seconds
+    # The filters still process incoming samples to remove the initial DC transient
+    if axis == "z" and time.perf_counter() - sampling_start_time >= filter_settling_time:
 
-    pyautogui.moveTo(x, 700)
+        # Count samples since the last detected knock
+        samples_to_prev_detection += 1
 
-    """
+        # Apply the adaptive peak detection algorithm
+        knock_detected, knock_max, was_previous_max = detect_knock(
+            filtered_voltage,
+            min_sample_spacing,
+            was_previous_max,
+            samples_to_prev_detection,
+            knock_max,
+            minimum_knock_voltage
+        )
+
+        # A new knock has been detected
+        if knock_detected:
+
+            # Reset the counter for the minimum separation between knocks
+            samples_to_prev_detection = 0
+
+            # Store the time of the detected knock
+            # Use the lock because the pattern recognition thread reads this buffer
+            with data_lock:
+                knock_timestamps_buffer.append(time.perf_counter())
+
+            print("KNOCK!")
 
     # End of Callback
     watchdog.end_of_callback()
-
 
 
 if __name__ == "__main__":

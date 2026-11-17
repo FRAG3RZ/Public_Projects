@@ -7,6 +7,18 @@ class CircularBuffer:
         self.oldest_index = 0 
         self.fill_count = 0
 
+    def clear(self):
+        """
+        Clear the whole bad boy
+        """
+
+        # Reset all stored values to zero
+        self.buffer.fill(0)
+
+        # Reset the circular buffer tracking variables
+        self.oldest_index = 0
+        self.fill_count = 0
+
     def append(self, item):
         """
         Uses the internal variables to correctly loop through the buffer

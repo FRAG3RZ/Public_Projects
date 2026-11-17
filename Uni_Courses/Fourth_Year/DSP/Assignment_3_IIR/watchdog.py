@@ -1,5 +1,6 @@
 import time
 import threading
+import numpy as np
 
 class Watchdog:
     def __init__(self, samples_per_second, time_individual_callback = False):
@@ -40,7 +41,7 @@ class Watchdog:
 
             elapsed_time = time.perf_counter() - self.time_at_0_callbacks
 
-            if elapsed_time >= 1.0:
+            if elapsed_time >= 10.0:
 
                 # Account for slight innacuracies in calling the monitor
                 measured_Fs = self.num_of_callbacks / elapsed_time
@@ -50,7 +51,9 @@ class Watchdog:
                     self.expired.set()
     
                     print("\n=============================================")
-                    print("Received too little callbacks per second ")
+                    print("   Received too little callbacks per second   ")
+                    print(f"Received : {measured_Fs} samples in the last 10 s")
+                    print(f"Expected samples count was: {self.samples_per_second}")
                     print("    Check connection or lower Fs")
                     print("=============================================\n")
                     return
@@ -79,6 +82,8 @@ class Watchdog:
 
                 print("\n=============================================")
                 print("Callback took too long - Lowering of Fs recommended!")
+                print(f"Last callback took: {callback_elapsed_time} s")
+                print(f"Maximum callback time is: {self.callback_maximum_time_s}")
                 print("=============================================\n")
                 return
 
